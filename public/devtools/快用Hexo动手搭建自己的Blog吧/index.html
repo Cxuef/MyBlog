@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!--
+  
+	     _.' __  `.  
+	 .--(#)(##)---/#\  
+	.' @          /###\  
+	:         ,   #####  
+	`-..__.-' _.-\###/    
+	    `;_:    `"'  
+	    .'"""""`.  
+	   /, 加☺油 ,\
+	  //  Eirot  \\  
+	  `-._______.-'  
+	  ___`. | .'___  
+	 (______|______) 
+			 
+  -->
+  <!-- (你瞅啥呢，不要偷看我(⊙o⊙)哦) by Eirot Chen on 2016-02-18 -->
+  
+  <meta name="baidu-site-verification" content="oOAZ6WWAUS" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>快用Hexo动手搭建自己的Blog吧 | Welcome to my blog ~</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Hexo是一款基于Node.js的静态博客，它是由台湾的一位大学生写出来的，支持很多主题和Markdown，很炫酷并且也很好用，现在已经可以支持多说了，很多人都在使用。如果你想Geek一下，可以尝试一下自己搭建一款属于自己的Hexo博客。其中自己特别喜欢yilia主题的简约大气，赞~ 另外本篇博文介绍的是Ubuntu14.0+hexo3.1+github+markdown的写作方式，比较适合Lin">
+<meta property="og:type" content="article">
+<meta property="og:title" content="快用Hexo动手搭建自己的Blog吧">
+<meta property="og:url" content="http://cxuef.github.io/devtools/快用Hexo动手搭建自己的Blog吧/index.html">
+<meta property="og:site_name" content="Welcome to my blog ~">
+<meta property="og:description" content="Hexo是一款基于Node.js的静态博客，它是由台湾的一位大学生写出来的，支持很多主题和Markdown，很炫酷并且也很好用，现在已经可以支持多说了，很多人都在使用。如果你想Geek一下，可以尝试一下自己搭建一款属于自己的Hexo博客。其中自己特别喜欢yilia主题的简约大气，赞~ 另外本篇博文介绍的是Ubuntu14.0+hexo3.1+github+markdown的写作方式，比较适合Lin">
+<meta property="og:image" content="http://cxuef.github.io/PostImage/blog-hexo.png">
+<meta property="og:image" content="http://cxuef.github.io/PostImage/hexo-github.png">
+<meta property="og:image" content="http://cxuef.github.io/PostImage/hexo-io.png">
+<meta property="og:image" content="http://cxuef.github.io/PostImage/hexo-doc.png">
+<meta property="og:image" content="http://cxuef.github.io/PostImage/hexo-plusins.png">
+<meta property="og:image" content="http://cxuef.github.io/PostImage/sudo_apt-get_install_npm.png">
+<meta property="og:image" content="http://cxuef.github.io/PostImage/npm_install_hexo-cli_-g_1.png">
+<meta property="og:image" content="http://cxuef.github.io/PostImage/npm_install_hexo-cli_-g_2.png">
+<meta property="og:image" content="http://cxuef.github.io/PostImage/hexo_init_blog.png">
+<meta property="og:image" content="http://cxuef.github.io/PostImage/softlink.png">
+<meta property="og:image" content="http://cxuef.github.io/PostImage/hexo_init_blog_2.png">
+<meta property="og:image" content="http://cxuef.github.io/PostImage/sudo_npm_install.png">
+<meta property="og:image" content="http://cxuef.github.io/PostImage/sudo_npm_install_2.png">
+<meta property="og:image" content="http://cxuef.github.io/PostImage/hexo_server.png">
+<meta property="og:image" content="http://cxuef.github.io/PostImage/hexo_new.png">
+<meta property="og:image" content="http://cxuef.github.io/PostImage/hexo_generate.png">
+<meta property="og:image" content="http://cxuef.github.io/PostImage/diy_theme_1.png">
+<meta property="og:image" content="http://cxuef.github.io/PostImage/diy_theme_2.png">
+<meta property="og:image" content="http://cxuef.github.io/PostImage/hexo_generate.png">
+<meta property="og:image" content="http://cxuef.github.io/PostImage/hexo_clean.png">
+<meta property="og:image" content="http://cxuef.github.io/PostImage/hexo-deployer-git1.png">
+<meta property="og:image" content="http://cxuef.github.io/PostImage/hexo-deployer-git2.png">
+<meta property="og:image" content="http://cxuef.github.io/PostImage/hexo_d1.png">
+<meta property="og:image" content="http://cxuef.github.io/PostImage/hexo_d2.png">
+<meta property="og:updated_time" content="2016-08-07T02:57:30.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="快用Hexo动手搭建自己的Blog吧">
+<meta name="twitter:description" content="Hexo是一款基于Node.js的静态博客，它是由台湾的一位大学生写出来的，支持很多主题和Markdown，很炫酷并且也很好用，现在已经可以支持多说了，很多人都在使用。如果你想Geek一下，可以尝试一下自己搭建一款属于自己的Hexo博客。其中自己特别喜欢yilia主题的简约大气，赞~ 另外本篇博文介绍的是Ubuntu14.0+hexo3.1+github+markdown的写作方式，比较适合Lin">
+<meta name="twitter:image" content="http://cxuef.github.io/PostImage/blog-hexo.png">
+  
+    <link rel="alternative" href="/atom.xml" title="Welcome to my blog ~" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?819b1c6493df653afb8c784db6";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="/img/eirot66.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Eirot Chen</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">世界上最幸福的事莫过于有能力做自己喜欢的事！</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+							<li><a href="/categories/心晴">心晴</a></li>
+				        
+							<li><a href="/categories/android">Android</a></li>
+				        
+							<li><a href="/categories/linux">Linux</a></li>
+				        
+							<li><a href="/categories/devtools">Devtools</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/Cxuef" title="github">github</a>
+					        
+								<a class="google" target="_blank" href="https://plus.google.com/u/0/103874083208789016426" title="google">google</a>
+					        
+								<a class="oschina" target="_blank" href="http://my.oschina.net/eirot" title="oschina">oschina</a>
+					        
+								<a class="weibo" target="_blank" href="http://weibo.com/Cxuef" title="weibo">weibo</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/Activity/" style="font-size: 10px;">Activity</a> <a href="/tags/Android-N-Preview/" style="font-size: 10px;">Android N Preview</a> <a href="/tags/Android-Studio/" style="font-size: 10px;">Android Studio</a> <a href="/tags/Fragment/" style="font-size: 10px;">Fragment</a> <a href="/tags/Hexo/" style="font-size: 20px;">Hexo</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/OpenCV/" style="font-size: 10px;">OpenCV</a> <a href="/tags/Shadowsocks/" style="font-size: 10px;">Shadowsocks</a> <a href="/tags/Sublime-Text-3/" style="font-size: 10px;">Sublime Text 3</a> <a href="/tags/adb/" style="font-size: 10px;">adb</a> <a href="/tags/android/" style="font-size: 10px;">android</a> <a href="/tags/apk/" style="font-size: 10px;">apk</a> <a href="/tags/ccache/" style="font-size: 10px;">ccache</a> <a href="/tags/devtools/" style="font-size: 10px;">devtools</a> <a href="/tags/ffmpeg/" style="font-size: 10px;">ffmpeg</a> <a href="/tags/google-play/" style="font-size: 10px;">google play</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/matlab/" style="font-size: 10px;">matlab</a> <a href="/tags/mount/" style="font-size: 10px;">mount</a> <a href="/tags/music/" style="font-size: 15px;">music</a> <a href="/tags/个人小站/" style="font-size: 10px;">个人小站</a> <a href="/tags/旅行/" style="font-size: 10px;">旅行</a> <a href="/tags/自定义View/" style="font-size: 10px;">自定义View</a> <a href="/tags/诗词/" style="font-size: 10px;">诗词</a> <a href="/tags/遇见/" style="font-size: 10px;">遇见</a>
+					</div>
+				</section>
+				
+				
+				
+
+				
+				
+				<section class="switch-part switch-part3">
+				
+					<div id="js-aboutme">西南大学2011级，90后爱幻想的双鱼座普通男青年。目前就职于四川成都Sioeye，任职Android 开发工程师。游弋于代码之间，爱捣鼓，爱瞎想，更爱技术的纯粹。热爱开源技术，CV爱好者~</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Eirot Chen</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<a href="/" class="profilepic">
+			
+				<img lazy-src="/img/eirot66.jpg" class="js-avatar">
+			
+			</a>
+			<hgroup>
+			  <h1 class="header-author">Eirot Chen</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">世界上最幸福的事莫过于有能力做自己喜欢的事！</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+					<li><a href="/categories/心晴">心晴</a></li>
+		        
+					<li><a href="/categories/android">Android</a></li>
+		        
+					<li><a href="/categories/linux">Linux</a></li>
+		        
+					<li><a href="/categories/devtools">Devtools</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/Cxuef" title="github">github</a>
+			        
+						<a class="google" target="_blank" href="https://plus.google.com/u/0/103874083208789016426" title="google">google</a>
+			        
+						<a class="oschina" target="_blank" href="http://my.oschina.net/eirot" title="oschina">oschina</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/Cxuef" title="weibo">weibo</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-快用Hexo动手搭建自己的Blog吧" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/devtools/快用Hexo动手搭建自己的Blog吧/" class="article-date">
+  	<time datetime="2016-02-19T05:55:18.000Z" itemprop="datePublished">2016-02-19</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      快用Hexo动手搭建自己的Blog吧
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/个人小站/">个人小站</a></li></ul>
+	</div>
+
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/devtools/">devtools</a>
+	</div>
+
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+		<!-- Table of Contents aadd by eirot chen 20160217-->
+		
+
+        <script src="/assets/js/APlayer.min.js"> </script><p>Hexo是一款基于Node.js的静态博客，它是由台湾的一位大学生写出来的，支持很多主题和Markdown，很炫酷并且也很好用，现在已经可以支持多说了，很多人都在使用。如果你想Geek一下，可以尝试一下自己搭建一款属于自己的Hexo博客。其中自己特别喜欢yilia主题的简约大气，赞~ 另外本篇博文介绍的是Ubuntu14.0+hexo3.1+github+markdown的写作方式，比较适合Linuxer玩家哟<br><img src="/PostImage/blog-hexo.png" alt="blog-hexo"></p>
+<a id="more"></a>
+<p><a href="https://github.com/hexojs/hexo" target="_blank" rel="external">https://github.com/hexojs/hexo</a><br><img src="/PostImage/hexo-github.png" alt="hexo-github"></p>
+<p><a href="https://hexo.io/" target="_blank" rel="external">https://hexo.io/</a><br><img src="/PostImage/hexo-io.png" alt="hexo-io"></p>
+<p><a href="https://hexo.io/docs/" target="_blank" rel="external">https://hexo.io/docs/</a><br><img src="/PostImage/hexo-doc.png" alt="hexo-doc"></p>
+<p><a href="https://hexo.io/plugins/" target="_blank" rel="external">https://hexo.io/plugins/</a><br><img src="/PostImage/hexo-plusins.png" alt="hexo-plusins"></p>
+<p>接下来就是正式地安装啦 O(∩_∩)O~<br><strong> 1. eirot@ubuntu64:~/MyDev/eirotBlog$ sudo apt-get install npm </strong><br><img src="/PostImage/sudo_apt-get_install_npm.png" alt="sudo_apt-get_install_npm"></p>
+<p><strong> 2. eirot@ubuntu64:~/MyDev/eirotBlog$ npm install hexo-cli -g  (多执行几次！) </strong><br><img src="/PostImage/npm_install_hexo-cli_-g_1.png" alt="npm_install_hexo-cli_-g_1"><br><img src="/PostImage/npm_install_hexo-cli_-g_2.png" alt="npm_install_hexo-cli_-g_2"></p>
+<p><strong> 3. eirot@ubuntu64:~/MyDev/eirotBlog$ hexo init blog </strong><br><img src="/PostImage/hexo_init_blog.png" alt="hexo_init_blog"></p>
+<p>解决方法：<a href="http://stackoverflow.com/questions/26320901/cannot-install-nodejs-usr-bin-env-node-no-such-file-or-directory" target="_blank" rel="external">http://stackoverflow.com/questions/26320901/cannot-install-nodejs-usr-bin-env-node-no-such-file-or-directory</a><br><img src="/PostImage/softlink.png" alt="softlink"><br>建立软连接：eirot@ubuntu64:~/MyDev/eirotBlog$ sudo ln -s /usr/bin/nodejs /usr/bin/node</p>
+<p>3.1再执行eirot@ubuntu64:~/MyDev/eirotBlog$ hexo init blog</p>
+<p>3.2现在我们的工作继续，得到如下结果：<br><img src="/PostImage/hexo_init_blog_2.png" alt="hexo_init_blog_2"></p>
+<p><strong> 4. 进入刚刚创建的blog目录：eirot@ubuntu64:~/MyDev/eirotBlog/blog$ sudo npm install </strong><br><img src="/PostImage/sudo_npm_install.png" alt="sudo_npm_install"><br><img src="/PostImage/sudo_npm_install_2.png" alt="sudo_npm_install_2"></p>
+<p><strong> 5. eirot@ubuntu64:~/MyDev/eirotBlog/blog$ hexo server </strong><br><img src="/PostImage/hexo_server.png" alt="hexo_server"></p>
+<p><strong> 6. eirot@ubuntu64:~/MyDev/eirotBlog/blog$ hexo new “Hello Eirot hexo !” </strong><br><img src="/PostImage/hexo_new.png" alt="hexo_new"></p>
+<p><strong> 7. eirot@ubuntu64:~/MyDev/eirotBlog/blog$ hexo generate </strong><br><img src="/PostImage/hexo_generate.png" alt="hexo_generate"></p>
+<p><strong> 8. 下载并配置自己喜欢的主题：eirot@ubuntu64:~/MyDev/eirotBlog/blog$ git clone <a href="https://github.com/litten/hexo-theme-yilia.git" target="_blank" rel="external">https://github.com/litten/hexo-theme-yilia.git</a> </strong><br><img src="/PostImage/diy_theme_1.png" alt="diy_theme_1"><br><img src="/PostImage/diy_theme_2.png" alt="diy_theme_2"><br>yilia主题结构：<br>.<br>├── languages<br>├── layout<br>│   └── _partial<br>│       └── post<br>└── source<br>    ├── css<br>    │   ├── fonts<br>    │   ├── _partial<br>    │   └── _util<br>    ├── fancybox<br>    │   └── helpers<br>    ├── img<br>    └── js<br>附上该大虾Blog~  <a href="http://litten.github.io/2014/08/31/hexo-theme-yilia/" target="_blank" rel="external">http://litten.github.io/2014/08/31/hexo-theme-yilia/</a></p>
+<p><strong> 9. github托管（注意千万不要少了空格！） </strong><br><img src="/PostImage/hexo_generate.png" alt="hexo_generate"><br><img src="/PostImage/hexo_clean.png" alt="hexo_clean"><br>安装默认插件完成后，为了支持github，还需要安装另一个插件：npm install hexo-deployer-git –save<br><img src="/PostImage/hexo-deployer-git1.png" alt="hexo-deployer-git1"><br><img src="/PostImage/hexo-deployer-git2.png" alt="hexo-deployer-git2"></p>
+<p><strong> 10. eirot@ubuntu64:~/MyDev/eirotBlog/blog$ hexo d </strong><br><img src="/PostImage/hexo_d1.png" alt="hexo_d1"><br><img src="/PostImage/hexo_d2.png" alt="hexo_d2"></p>
+<p><strong> 11. Hexo 常用命令 </strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">hexo new <span class="string">"postName"</span> <span class="comment">#新建文章</span></div><div class="line">hexo new page <span class="string">"pageName"</span> <span class="comment">#新建页面</span></div><div class="line">hexo clean <span class="comment">#清除生成的东西</span></div><div class="line">hexo generate <span class="comment">#生成静态页面至public目录</span></div><div class="line">hexo server <span class="comment">#开启预览访问端口（默认端口4000，'ctrl + c'关闭server）</span></div><div class="line">hexo deploy <span class="comment">#将.deploy目录部署到GitHub</span></div><div class="line">hexo <span class="built_in">help</span>  <span class="comment"># 查看帮助</span></div><div class="line">hexo version  <span class="comment">#查看Hexo的版本</span></div></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/linux/Linux永久挂载-mount-分区/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          Linux永久挂载(mount)分区
+        
+      </div>
+    </a>
+  
+  
+    <a href="/心晴/好玩的音乐社区/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">好玩的音乐社区</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style" style="margin-left:38px">
+		<span class="jiathis_txt">分享到: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+        <a class="jiathis_button_twitter"></a>
+        <a class="jiathis_button_plus"></a> 
+        <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="快用Hexo动手搭建自己的Blog吧" data-title="快用Hexo动手搭建自己的Blog吧" data-url="http://cxuef.github.io/devtools/快用Hexo动手搭建自己的Blog吧/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"eirot"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+        ds.src = 'http://cxuef.github.io/js/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 Eirot Chen
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+		<div class="visit">
+            <span id="busuanzi_container_site_pv" style='display:none'>
+                <span id="site-visit" >小站到访数: 
+                    <span id="busuanzi_value_site_uv" style="font-weight:bold;color:#666666" ></span>
+                </span>
+            </span>
+            <span id="busuanzi_container_page_pv" style='display:none'>
+                <span id="page-visit">, 本页阅读量: 
+                    <span id="busuanzi_value_page_pv" style="font-weight:bold;color:#666666"></span>
+                </span>
+            </span>
+        </div>
+    </div>
+  </div>
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"> </script>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        mathjax: false,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        open_in_new: false
+    }
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+
+<div id="totop" style="position:fixed;bottom:100px;right:8px;cursor: pointer;">
+<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+</div>
+
+<script src="/js/totop.js"></script>
+
+
+  </div>
+</body>
+</html>
