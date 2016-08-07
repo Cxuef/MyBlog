@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!--
+  
+	     _.' __  `.  
+	 .--(#)(##)---/#\  
+	.' @          /###\  
+	:         ,   #####  
+	`-..__.-' _.-\###/    
+	    `;_:    `"'  
+	    .'"""""`.  
+	   /, 加☺油 ,\
+	  //  Eirot  \\  
+	  `-._______.-'  
+	  ___`. | .'___  
+	 (______|______) 
+			 
+  -->
+  <!-- (你瞅啥呢，不要偷看我(⊙o⊙)哦) by Eirot Chen on 2016-02-18 -->
+  
+  <meta name="baidu-site-verification" content="oOAZ6WWAUS" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>Android Studio Tip of the Day | Welcome to my blog ~</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="http://www.developerphil.com/android-studio-tips-of-the-day-roundup-1/http://developer.android.com/intl/zh-cn/sdk/index.htmlhttp://www.jetbrains.com/idea/https://www.jetbrains.com/help/idea/2016.1/and">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android Studio Tip of the Day">
+<meta property="og:url" content="http://cxuef.github.io/android/Android-Studio-Tip-of-the-Day/index.html">
+<meta property="og:site_name" content="Welcome to my blog ~">
+<meta property="og:description" content="http://www.developerphil.com/android-studio-tips-of-the-day-roundup-1/http://developer.android.com/intl/zh-cn/sdk/index.htmlhttp://www.jetbrains.com/idea/https://www.jetbrains.com/help/idea/2016.1/and">
+<meta property="og:image" content="http://cxuef.github.io/PostImage/as_loading.png">
+<meta property="og:image" content="http://cxuef.github.io/PostImage/as_shortcut.png">
+<meta property="og:updated_time" content="2016-08-07T02:57:30.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Android Studio Tip of the Day">
+<meta name="twitter:description" content="http://www.developerphil.com/android-studio-tips-of-the-day-roundup-1/http://developer.android.com/intl/zh-cn/sdk/index.htmlhttp://www.jetbrains.com/idea/https://www.jetbrains.com/help/idea/2016.1/and">
+<meta name="twitter:image" content="http://cxuef.github.io/PostImage/as_loading.png">
+  
+    <link rel="alternative" href="/atom.xml" title="Welcome to my blog ~" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?819b1c6493df653afb8c784db6";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="/img/eirot66.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Eirot Chen</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">世界上最幸福的事莫过于有能力做自己喜欢的事！</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+							<li><a href="/categories/心晴">心晴</a></li>
+				        
+							<li><a href="/categories/android">Android</a></li>
+				        
+							<li><a href="/categories/linux">Linux</a></li>
+				        
+							<li><a href="/categories/devtools">Devtools</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/Cxuef" title="github">github</a>
+					        
+								<a class="google" target="_blank" href="https://plus.google.com/u/0/103874083208789016426" title="google">google</a>
+					        
+								<a class="oschina" target="_blank" href="http://my.oschina.net/eirot" title="oschina">oschina</a>
+					        
+								<a class="weibo" target="_blank" href="http://weibo.com/Cxuef" title="weibo">weibo</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/Activity/" style="font-size: 10px;">Activity</a> <a href="/tags/Android-N-Preview/" style="font-size: 10px;">Android N Preview</a> <a href="/tags/Android-Studio/" style="font-size: 10px;">Android Studio</a> <a href="/tags/Fragment/" style="font-size: 10px;">Fragment</a> <a href="/tags/Hexo/" style="font-size: 20px;">Hexo</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/OpenCV/" style="font-size: 10px;">OpenCV</a> <a href="/tags/Shadowsocks/" style="font-size: 10px;">Shadowsocks</a> <a href="/tags/Sublime-Text-3/" style="font-size: 10px;">Sublime Text 3</a> <a href="/tags/adb/" style="font-size: 10px;">adb</a> <a href="/tags/android/" style="font-size: 10px;">android</a> <a href="/tags/apk/" style="font-size: 10px;">apk</a> <a href="/tags/ccache/" style="font-size: 10px;">ccache</a> <a href="/tags/devtools/" style="font-size: 10px;">devtools</a> <a href="/tags/ffmpeg/" style="font-size: 10px;">ffmpeg</a> <a href="/tags/google-play/" style="font-size: 10px;">google play</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/matlab/" style="font-size: 10px;">matlab</a> <a href="/tags/mount/" style="font-size: 10px;">mount</a> <a href="/tags/music/" style="font-size: 15px;">music</a> <a href="/tags/个人小站/" style="font-size: 10px;">个人小站</a> <a href="/tags/旅行/" style="font-size: 10px;">旅行</a> <a href="/tags/自定义View/" style="font-size: 10px;">自定义View</a> <a href="/tags/诗词/" style="font-size: 10px;">诗词</a> <a href="/tags/遇见/" style="font-size: 10px;">遇见</a>
+					</div>
+				</section>
+				
+				
+				
+
+				
+				
+				<section class="switch-part switch-part3">
+				
+					<div id="js-aboutme">西南大学2011级，90后爱幻想的双鱼座普通男青年。目前就职于四川成都Sioeye，任职Android 开发工程师。游弋于代码之间，爱捣鼓，爱瞎想，更爱技术的纯粹。热爱开源技术，CV爱好者~</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Eirot Chen</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<a href="/" class="profilepic">
+			
+				<img lazy-src="/img/eirot66.jpg" class="js-avatar">
+			
+			</a>
+			<hgroup>
+			  <h1 class="header-author">Eirot Chen</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">世界上最幸福的事莫过于有能力做自己喜欢的事！</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+					<li><a href="/categories/心晴">心晴</a></li>
+		        
+					<li><a href="/categories/android">Android</a></li>
+		        
+					<li><a href="/categories/linux">Linux</a></li>
+		        
+					<li><a href="/categories/devtools">Devtools</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/Cxuef" title="github">github</a>
+			        
+						<a class="google" target="_blank" href="https://plus.google.com/u/0/103874083208789016426" title="google">google</a>
+			        
+						<a class="oschina" target="_blank" href="http://my.oschina.net/eirot" title="oschina">oschina</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/Cxuef" title="weibo">weibo</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-Android-Studio-Tip-of-the-Day" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/android/Android-Studio-Tip-of-the-Day/" class="article-date">
+  	<time datetime="2016-04-12T01:50:23.000Z" itemprop="datePublished">2016-04-12</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Android Studio Tip of the Day
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android-Studio/">Android Studio</a></li></ul>
+	</div>
+
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/android/">android</a>
+	</div>
+
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+		<!-- Table of Contents aadd by eirot chen 20160217-->
+		
+
+        <script src="/assets/js/APlayer.min.js"> </script><p><a href="http://www.developerphil.com/android-studio-tips-of-the-day-roundup-1/" target="_blank" rel="external">http://www.developerphil.com/android-studio-tips-of-the-day-roundup-1/</a><br><a href="http://developer.android.com/intl/zh-cn/sdk/index.html" target="_blank" rel="external">http://developer.android.com/intl/zh-cn/sdk/index.html</a><br><a href="http://www.jetbrains.com/idea/" target="_blank" rel="external">http://www.jetbrains.com/idea/</a><br><a href="https://www.jetbrains.com/help/idea/2016.1/android.html?origin=old_help" target="_blank" rel="external">https://www.jetbrains.com/help/idea/2016.1/android.html?origin=old_help</a></p>
+<p>Android Studio Tips and Tricks</p>
+<ul>
+<li><p>Productivity Shortcuts</p>
+</li>
+<li><p>Smart Rendering</p>
+</li>
+<li><p>Bitmap rendering in the debugger</p>
+</li>
+<li><p>Creating new files</p>
+</li>
+<li><p>Output window message filtering</p>
+</li>
+<li><p>Hierarchical parent setting</p>
+</li>
+<li><p>Creating layouts</p>
+</li>
+<li><p>Annotations</p>
+</li>
+<li><p>Java class decompiling</p>
+</li>
+<li><p>Debugging and performance enhancements</p>
+</li>
+<li><p>Live templates</p>
+</li>
+</ul>
+<p><img src="/PostImage/as_loading.png" alt="Andtoid Studio"></p>
+<a id="more"></a>
+<hr>
+<p><strong> Android studio shortcut of Windows or Linux </strong></p>
+<p>shitf+Esc  //收起项目结构<br>F12  //再次回复项目结构</p>
+<p><span style="color:blue"> ctrl + 字母的组合： </span><br>ctrl+y       //Delete Line 删除一行<br>ctrl+d       //Duplicate Lines 复制一行<br>ctrl+e       //展示最近的文件列表<br>ctrl+j       //给出建议提示<br>ctrl+w       //逐步扩大范围<br>ctrl+u       //查看重写的父类的方法</p>
+<p><span style="color:blue"> ctrl + Fn的组合： </span><br>ctrl+F8      //打开所在行打断点调试，不用点击鼠标左键<br>ctrl+f12     //The File Structure Popup 所在类的属性、方法视图，可快速搜索</p>
+<p><span style="color:blue"> ctrl + alt等的组合： </span><br>ctrl+alt+方向键左右    //返回光标之前或之后的位置<br>alt+方向键左右    //返回最近打开文件之前或之后的位置</p>
+<p><span style="color:blue"> ctrl + shift等的组合： </span><br>ctrl+shift+i      //Quick Definition Lookup 快速查看定义<br>ctrl+shift+f7     //Highlight All the Things 高亮显示标记的内容<br>ctrl+shift+up/down    //Move Whole Method Up/Down 移动整个方法</p>
+<p><span style="color:blue"> alt + shift等的组合： </span><br>alt+up/down      //Move Between Methods and Inner Classes 类内方法之间移动<br>alt+shift+up/down      //Move Lines Up/Down 上下交换一行<br>alt+鼠标左键拖动      //选择多列区域</p>
+<hr>
+<p><img src="/PostImage/as_shortcut.png" alt="Andtoid Studio"></p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/devtools/Ubuntu14-0-Sublime-Text-3-安装及配置/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          Ubuntu14.0 Sublime Text 3 安装及配置
+        
+      </div>
+    </a>
+  
+  
+    <a href="/devtools/实用的小众工具，赶紧get吧/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">实用的小众工具，赶紧get吧</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style" style="margin-left:38px">
+		<span class="jiathis_txt">分享到: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+        <a class="jiathis_button_twitter"></a>
+        <a class="jiathis_button_plus"></a> 
+        <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="Android-Studio-Tip-of-the-Day" data-title="Android Studio Tip of the Day" data-url="http://cxuef.github.io/android/Android-Studio-Tip-of-the-Day/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"eirot"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+        ds.src = 'http://cxuef.github.io/js/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 Eirot Chen
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+		<div class="visit">
+            <span id="busuanzi_container_site_pv" style='display:none'>
+                <span id="site-visit" >小站到访数: 
+                    <span id="busuanzi_value_site_uv" style="font-weight:bold;color:#666666" ></span>
+                </span>
+            </span>
+            <span id="busuanzi_container_page_pv" style='display:none'>
+                <span id="page-visit">, 本页阅读量: 
+                    <span id="busuanzi_value_page_pv" style="font-weight:bold;color:#666666"></span>
+                </span>
+            </span>
+        </div>
+    </div>
+  </div>
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"> </script>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        mathjax: false,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        open_in_new: false
+    }
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+
+<div id="totop" style="position:fixed;bottom:100px;right:8px;cursor: pointer;">
+<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+</div>
+
+<script src="/js/totop.js"></script>
+
+
+  </div>
+</body>
+</html>

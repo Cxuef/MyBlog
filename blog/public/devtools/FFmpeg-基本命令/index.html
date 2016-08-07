@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!--
+  
+	     _.' __  `.  
+	 .--(#)(##)---/#\  
+	.' @          /###\  
+	:         ,   #####  
+	`-..__.-' _.-\###/    
+	    `;_:    `"'  
+	    .'"""""`.  
+	   /, 加☺油 ,\
+	  //  Eirot  \\  
+	  `-._______.-'  
+	  ___`. | .'___  
+	 (______|______) 
+			 
+  -->
+  <!-- (你瞅啥呢，不要偷看我(⊙o⊙)哦) by Eirot Chen on 2016-02-18 -->
+  
+  <meta name="baidu-site-verification" content="oOAZ6WWAUS" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>FFmpeg 基本命令 | Welcome to my blog ~</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="【ffmpeg命令】无损剪辑视频利用ffmpeg可以快速的剪辑视频，保留你想要的有用信息。嘿嘿，格式如下：ffmpeg -i input.mp4 -ss [START_TIME] -t [TOTAL_TIME] -acodec copy -vcodec copy output.mp4eirot@ubuntu64 :~/MyDev/video$ ffmpeg -i Caminandes.mp4 -">
+<meta property="og:type" content="article">
+<meta property="og:title" content="FFmpeg 基本命令">
+<meta property="og:url" content="http://cxuef.github.io/devtools/FFmpeg-基本命令/index.html">
+<meta property="og:site_name" content="Welcome to my blog ~">
+<meta property="og:description" content="【ffmpeg命令】无损剪辑视频利用ffmpeg可以快速的剪辑视频，保留你想要的有用信息。嘿嘿，格式如下：ffmpeg -i input.mp4 -ss [START_TIME] -t [TOTAL_TIME] -acodec copy -vcodec copy output.mp4eirot@ubuntu64 :~/MyDev/video$ ffmpeg -i Caminandes.mp4 -">
+<meta property="og:image" content="http://cxuef.github.io/PostImage/ffmpeg_logo.png">
+<meta property="og:image" content="http://cxuef.github.io/PostImage/ffmpeg_structure_decode.jpg">
+<meta property="og:updated_time" content="2016-08-07T02:57:30.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="FFmpeg 基本命令">
+<meta name="twitter:description" content="【ffmpeg命令】无损剪辑视频利用ffmpeg可以快速的剪辑视频，保留你想要的有用信息。嘿嘿，格式如下：ffmpeg -i input.mp4 -ss [START_TIME] -t [TOTAL_TIME] -acodec copy -vcodec copy output.mp4eirot@ubuntu64 :~/MyDev/video$ ffmpeg -i Caminandes.mp4 -">
+<meta name="twitter:image" content="http://cxuef.github.io/PostImage/ffmpeg_logo.png">
+  
+    <link rel="alternative" href="/atom.xml" title="Welcome to my blog ~" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?819b1c6493df653afb8c784db6";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="/img/eirot66.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Eirot Chen</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">世界上最幸福的事莫过于有能力做自己喜欢的事！</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+							<li><a href="/categories/心晴">心晴</a></li>
+				        
+							<li><a href="/categories/android">Android</a></li>
+				        
+							<li><a href="/categories/linux">Linux</a></li>
+				        
+							<li><a href="/categories/devtools">Devtools</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/Cxuef" title="github">github</a>
+					        
+								<a class="google" target="_blank" href="https://plus.google.com/u/0/103874083208789016426" title="google">google</a>
+					        
+								<a class="oschina" target="_blank" href="http://my.oschina.net/eirot" title="oschina">oschina</a>
+					        
+								<a class="weibo" target="_blank" href="http://weibo.com/Cxuef" title="weibo">weibo</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/Activity/" style="font-size: 10px;">Activity</a> <a href="/tags/Android-N-Preview/" style="font-size: 10px;">Android N Preview</a> <a href="/tags/Android-Studio/" style="font-size: 10px;">Android Studio</a> <a href="/tags/Fragment/" style="font-size: 10px;">Fragment</a> <a href="/tags/Hexo/" style="font-size: 20px;">Hexo</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/OpenCV/" style="font-size: 10px;">OpenCV</a> <a href="/tags/Shadowsocks/" style="font-size: 10px;">Shadowsocks</a> <a href="/tags/Sublime-Text-3/" style="font-size: 10px;">Sublime Text 3</a> <a href="/tags/adb/" style="font-size: 10px;">adb</a> <a href="/tags/android/" style="font-size: 10px;">android</a> <a href="/tags/apk/" style="font-size: 10px;">apk</a> <a href="/tags/ccache/" style="font-size: 10px;">ccache</a> <a href="/tags/devtools/" style="font-size: 10px;">devtools</a> <a href="/tags/ffmpeg/" style="font-size: 10px;">ffmpeg</a> <a href="/tags/google-play/" style="font-size: 10px;">google play</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/matlab/" style="font-size: 10px;">matlab</a> <a href="/tags/mount/" style="font-size: 10px;">mount</a> <a href="/tags/music/" style="font-size: 15px;">music</a> <a href="/tags/个人小站/" style="font-size: 10px;">个人小站</a> <a href="/tags/旅行/" style="font-size: 10px;">旅行</a> <a href="/tags/自定义View/" style="font-size: 10px;">自定义View</a> <a href="/tags/诗词/" style="font-size: 10px;">诗词</a> <a href="/tags/遇见/" style="font-size: 10px;">遇见</a>
+					</div>
+				</section>
+				
+				
+				
+
+				
+				
+				<section class="switch-part switch-part3">
+				
+					<div id="js-aboutme">西南大学2011级，90后爱幻想的双鱼座普通男青年。目前就职于四川成都Sioeye，任职Android 开发工程师。游弋于代码之间，爱捣鼓，爱瞎想，更爱技术的纯粹。热爱开源技术，CV爱好者~</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Eirot Chen</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<a href="/" class="profilepic">
+			
+				<img lazy-src="/img/eirot66.jpg" class="js-avatar">
+			
+			</a>
+			<hgroup>
+			  <h1 class="header-author">Eirot Chen</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">世界上最幸福的事莫过于有能力做自己喜欢的事！</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+					<li><a href="/categories/心晴">心晴</a></li>
+		        
+					<li><a href="/categories/android">Android</a></li>
+		        
+					<li><a href="/categories/linux">Linux</a></li>
+		        
+					<li><a href="/categories/devtools">Devtools</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/Cxuef" title="github">github</a>
+			        
+						<a class="google" target="_blank" href="https://plus.google.com/u/0/103874083208789016426" title="google">google</a>
+			        
+						<a class="oschina" target="_blank" href="http://my.oschina.net/eirot" title="oschina">oschina</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/Cxuef" title="weibo">weibo</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-FFmpeg-基本命令" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/devtools/FFmpeg-基本命令/" class="article-date">
+  	<time datetime="2016-03-01T13:14:21.000Z" itemprop="datePublished">2016-03-01</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      FFmpeg 基本命令
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ffmpeg/">ffmpeg</a></li></ul>
+	</div>
+
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/devtools/">devtools</a>
+	</div>
+
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+		<!-- Table of Contents aadd by eirot chen 20160217-->
+		
+
+        <script src="/assets/js/APlayer.min.js"> </script><ul>
+<li><p>【ffmpeg命令】无损剪辑视频<br>利用ffmpeg可以快速的剪辑视频，保留你想要的有用信息。嘿嘿，格式如下：<br>ffmpeg -i input.mp4 -ss [START_TIME] -t [TOTAL_TIME] -acodec copy -vcodec copy output.mp4<br>eirot@ubuntu64 :~/MyDev/video$ ffmpeg -i Caminandes.mp4 -ss 00:00:21 -t 00:00:20 -acodec copy -vcodec copy  -strict -2 haha.mp4</p>
+</li>
+<li><p>【ffmpeg命令】MP4转换为gif并且裁剪视频大小<br>eirot@ubuntu64:~/MyDev/video$ ffmpeg -i haha.mp4 -pix_fmt rgb24 -vf crop=iw/1.15:ih:0:0  Mygif.gif</p>
+</li>
+<li><p>【ffmpeg命令】转换视频格式、分辨率及宽高比<br>ffmpeg -i input.mp4 -vcodec mjpeg -s 320x240 -aspect 4:3 output.avi</p>
+</li>
+<li><p>【用图片制作视频】<br>ffmpeg -f image2 -i ImageNamePrefix%04d.png -r [frame rate] output.mp4</p>
+</li>
+</ul>
+<p><img src="/PostImage/ffmpeg_logo.png" alt="ffmpeng logo"><br><a id="more"></a></p>
+<p>ffmpeg helper command:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div></pre></td><td class="code"><pre><div class="line">eirot@ubuntu64:~/MyDev/video$ ffmpeg -h</div><div class="line">ffmpeg version 2.8.3 Copyright (c) 2000-2015 the FFmpeg developers</div><div class="line">  built with gcc 4.8 (Ubuntu 4.8.4-2ubuntu1~14.04)</div><div class="line">  configuration: --enable-shared --disable-static --prefix=/usr/<span class="built_in">local</span>/ffmpeg</div><div class="line">  WARNING: library configuration mismatch</div><div class="line">  swscale     configuration: --enable-shared</div><div class="line">  swresample  configuration: --enable-shared</div><div class="line">  libavutil      54. 31.100 / 54. 31.100</div><div class="line">  libavcodec     56. 60.100 / 56. 60.100</div><div class="line">  libavformat    56. 40.101 / 56. 40.101</div><div class="line">  libavdevice    56.  4.100 / 56.  4.100</div><div class="line">  libavfilter     5. 40.101 /  5. 40.101</div><div class="line">  libswscale      3.  1.101 /  3.  1.101</div><div class="line">  libswresample   1.  2.101 /  1.  2.100</div><div class="line">Hyper fast Audio and Video encoder</div><div class="line">usage: ffmpeg [options] [[infile options] -i infile]... &#123;[outfile options] outfile&#125;...</div><div class="line"></div><div class="line">Getting <span class="built_in">help</span>:</div><div class="line">    -h      -- <span class="built_in">print</span> basic options</div><div class="line">    -h long -- <span class="built_in">print</span> more options</div><div class="line">    -h full -- <span class="built_in">print</span> all options (including all format and codec specific options, very long)</div><div class="line">    See man ffmpeg <span class="keyword">for</span> detailed description of the options.</div><div class="line"></div><div class="line">Print <span class="built_in">help</span> / information / capabilities:</div><div class="line">-L                  show license</div><div class="line">-h topic            show <span class="built_in">help</span></div><div class="line">-? topic            show <span class="built_in">help</span></div><div class="line">-help topic         show <span class="built_in">help</span></div><div class="line">--help topic        show <span class="built_in">help</span></div><div class="line">-version            show version</div><div class="line">-buildconf          show build configuration</div><div class="line">-formats            show available formats</div><div class="line">-devices            show available devices</div><div class="line">-codecs             show available codecs</div><div class="line">-decoders           show available decoders</div><div class="line">-encoders           show available encoders</div><div class="line">-bsfs               show available bit stream filters</div><div class="line">-protocols          show available protocols</div><div class="line">-filters            show available filters</div><div class="line">-pix_fmts           show available pixel formats</div><div class="line">-layouts            show standard channel layouts</div><div class="line">-sample_fmts        show available audio sample formats</div><div class="line">-colors             show available color names</div><div class="line">-sources device     list sources of the input device</div><div class="line">-sinks device       list sinks of the output device</div><div class="line">-hwaccels           show available HW acceleration methods</div><div class="line"></div><div class="line">Global options (affect whole program instead of just one file:</div><div class="line">-loglevel loglevel  <span class="built_in">set</span> logging level</div><div class="line">-v loglevel         <span class="built_in">set</span> logging level</div><div class="line">-report             generate a report</div><div class="line">-max_alloc bytes    <span class="built_in">set</span> maximum size of a single allocated block</div><div class="line">-y                  overwrite output files</div><div class="line">-n                  never overwrite output files</div><div class="line">-ignore_unknown     Ignore unknown stream types</div><div class="line">-stats              <span class="built_in">print</span> progress report during encoding</div><div class="line">-max_error_rate ratio of errors (0.0: no errors, 1.0: 100% error  maximum error rate</div><div class="line">-bits_per_raw_sample number  <span class="built_in">set</span> the number of bits per raw sample</div><div class="line">-vol volume         change audio volume (256=normal)</div><div class="line"></div><div class="line">Per-file main options:</div><div class="line"><span class="_">-f</span> fmt              force format</div><div class="line">-c codec            codec name</div><div class="line">-codec codec        codec name</div><div class="line">-pre preset         preset name</div><div class="line">-map_metadata outfile[,metadata]:infile[,metadata]  <span class="built_in">set</span> metadata information of outfile from infile</div><div class="line">-t duration         record or transcode <span class="string">"duration"</span> seconds of audio/video</div><div class="line">-to time_stop       record or transcode stop time</div><div class="line">-fs <span class="built_in">limit</span>_size      <span class="built_in">set</span> the <span class="built_in">limit</span> file size <span class="keyword">in</span> bytes</div><div class="line">-ss time_off        <span class="built_in">set</span> the start time offset</div><div class="line">-sseof time_off     <span class="built_in">set</span> the start time offset relative to EOF</div><div class="line">-seek_timestamp     <span class="built_in">enable</span>/<span class="built_in">disable</span> seeking by timestamp with -ss</div><div class="line">-timestamp time     <span class="built_in">set</span> the recording timestamp (<span class="string">'now'</span> to <span class="built_in">set</span> the current time)</div><div class="line">-metadata string=string  add metadata</div><div class="line">-target <span class="built_in">type</span>        specify target file <span class="built_in">type</span> (<span class="string">"vcd"</span>, <span class="string">"svcd"</span>, <span class="string">"dvd"</span>, <span class="string">"dv"</span> or <span class="string">"dv50"</span> with optional prefixes <span class="string">"pal-"</span>, <span class="string">"ntsc-"</span> or <span class="string">"film-"</span>)</div><div class="line">-apad               audio pad</div><div class="line">-frames number      <span class="built_in">set</span> the number of frames to output</div><div class="line">-filter filter_graph  <span class="built_in">set</span> stream filtergraph</div><div class="line">-filter_script filename  <span class="built_in">read</span> stream filtergraph description from a file</div><div class="line">-reinit_filter      reinit filtergraph on input parameter changes</div><div class="line">-discard            discard</div><div class="line">-disposition        disposition</div><div class="line"></div><div class="line">Video options:</div><div class="line">-vframes number     <span class="built_in">set</span> the number of video frames to output</div><div class="line">-r rate             <span class="built_in">set</span> frame rate (Hz value, fraction or abbreviation)</div><div class="line"><span class="_">-s</span> size             <span class="built_in">set</span> frame size (WxH or abbreviation)</div><div class="line">-aspect aspect      <span class="built_in">set</span> aspect ratio (4:3, 16:9 or 1.3333, 1.7777)</div><div class="line">-bits_per_raw_sample number  <span class="built_in">set</span> the number of bits per raw sample</div><div class="line">-vn                 <span class="built_in">disable</span> video</div><div class="line">-vcodec codec       force video codec (<span class="string">'copy'</span> to copy stream)</div><div class="line">-timecode hh:mm:ss[:;.]ff  <span class="built_in">set</span> initial TimeCode value.</div><div class="line">-pass n             select the pass number (1 to 3)</div><div class="line">-vf filter_graph    <span class="built_in">set</span> video filters</div><div class="line">-ab bitrate         audio bitrate (please use -b:a)</div><div class="line">-b bitrate          video bitrate (please use -b:v)</div><div class="line">-dn                 <span class="built_in">disable</span> data</div><div class="line"></div><div class="line">Audio options:</div><div class="line">-aframes number     <span class="built_in">set</span> the number of audio frames to output</div><div class="line">-aq quality         <span class="built_in">set</span> audio quality (codec-specific)</div><div class="line">-ar rate            <span class="built_in">set</span> audio sampling rate (<span class="keyword">in</span> Hz)</div><div class="line">-ac channels        <span class="built_in">set</span> number of audio channels</div><div class="line">-an                 <span class="built_in">disable</span> audio</div><div class="line">-acodec codec       force audio codec (<span class="string">'copy'</span> to copy stream)</div><div class="line">-vol volume         change audio volume (256=normal)</div><div class="line">-af filter_graph    <span class="built_in">set</span> audio filters</div><div class="line"></div><div class="line">Subtitle options:</div><div class="line"><span class="_">-s</span> size             <span class="built_in">set</span> frame size (WxH or abbreviation)</div><div class="line">-sn                 <span class="built_in">disable</span> subtitle</div><div class="line">-scodec codec       force subtitle codec (<span class="string">'copy'</span> to copy stream)</div><div class="line">-stag fourcc/tag    force subtitle tag/fourcc</div><div class="line">-fix_sub_duration   fix subtitles duration</div><div class="line">-canvas_size size   <span class="built_in">set</span> canvas size (WxH or abbreviation)</div><div class="line">-spre preset        <span class="built_in">set</span> the subtitle options to the indicated preset</div></pre></td></tr></table></figure></p>
+<p>查看ffmpeg支持的格式<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div><div class="line">174</div><div class="line">175</div><div class="line">176</div><div class="line">177</div><div class="line">178</div><div class="line">179</div><div class="line">180</div><div class="line">181</div><div class="line">182</div><div class="line">183</div><div class="line">184</div><div class="line">185</div><div class="line">186</div><div class="line">187</div><div class="line">188</div><div class="line">189</div><div class="line">190</div><div class="line">191</div><div class="line">192</div><div class="line">193</div><div class="line">194</div><div class="line">195</div><div class="line">196</div><div class="line">197</div><div class="line">198</div><div class="line">199</div><div class="line">200</div><div class="line">201</div><div class="line">202</div><div class="line">203</div><div class="line">204</div><div class="line">205</div><div class="line">206</div><div class="line">207</div><div class="line">208</div><div class="line">209</div><div class="line">210</div><div class="line">211</div><div class="line">212</div><div class="line">213</div><div class="line">214</div><div class="line">215</div><div class="line">216</div><div class="line">217</div><div class="line">218</div><div class="line">219</div><div class="line">220</div><div class="line">221</div><div class="line">222</div><div class="line">223</div><div class="line">224</div><div class="line">225</div><div class="line">226</div><div class="line">227</div><div class="line">228</div><div class="line">229</div><div class="line">230</div><div class="line">231</div><div class="line">232</div><div class="line">233</div><div class="line">234</div><div class="line">235</div><div class="line">236</div><div class="line">237</div><div class="line">238</div><div class="line">239</div><div class="line">240</div><div class="line">241</div><div class="line">242</div><div class="line">243</div><div class="line">244</div><div class="line">245</div><div class="line">246</div><div class="line">247</div><div class="line">248</div><div class="line">249</div><div class="line">250</div><div class="line">251</div><div class="line">252</div><div class="line">253</div><div class="line">254</div><div class="line">255</div><div class="line">256</div><div class="line">257</div><div class="line">258</div><div class="line">259</div><div class="line">260</div><div class="line">261</div><div class="line">262</div><div class="line">263</div><div class="line">264</div><div class="line">265</div><div class="line">266</div><div class="line">267</div><div class="line">268</div><div class="line">269</div><div class="line">270</div><div class="line">271</div><div class="line">272</div><div class="line">273</div><div class="line">274</div><div class="line">275</div><div class="line">276</div><div class="line">277</div><div class="line">278</div><div class="line">279</div><div class="line">280</div><div class="line">281</div><div class="line">282</div><div class="line">283</div><div class="line">284</div><div class="line">285</div><div class="line">286</div><div class="line">287</div><div class="line">288</div><div class="line">289</div><div class="line">290</div><div class="line">291</div><div class="line">292</div><div class="line">293</div><div class="line">294</div><div class="line">295</div><div class="line">296</div><div class="line">297</div><div class="line">298</div><div class="line">299</div><div class="line">300</div><div class="line">301</div><div class="line">302</div><div class="line">303</div><div class="line">304</div><div class="line">305</div><div class="line">306</div><div class="line">307</div><div class="line">308</div><div class="line">309</div></pre></td><td class="code"><pre><div class="line">eirot@ubuntu64:~$ ffmpeg -formats</div><div class="line">ffmpeg version 2.8.3 Copyright (c) 2000-2015 the FFmpeg developers</div><div class="line">  built with gcc 4.8 (Ubuntu 4.8.4-2ubuntu1~14.04)</div><div class="line">  configuration: --enable-shared --disable-static --prefix=/usr/<span class="built_in">local</span>/ffmpeg</div><div class="line">  WARNING: library configuration mismatch</div><div class="line">  swscale     configuration: --enable-shared</div><div class="line">  swresample  configuration: --enable-shared</div><div class="line">  libavutil      54. 31.100 / 54. 31.100</div><div class="line">  libavcodec     56. 60.100 / 56. 60.100</div><div class="line">  libavformat    56. 40.101 / 56. 40.101</div><div class="line">  libavdevice    56.  4.100 / 56.  4.100</div><div class="line">  libavfilter     5. 40.101 /  5. 40.101</div><div class="line">  libswscale      3.  1.101 /  3.  1.101</div><div class="line">  libswresample   1.  2.101 /  1.  2.100</div><div class="line">File formats:</div><div class="line"> D. = Demuxing supported</div><div class="line"> .E = Muxing supported</div><div class="line"> --</div><div class="line">  E 3g2             3GP2 (3GPP2 file format)</div><div class="line">  E 3gp             3GP (3GPP file format)</div><div class="line"> D  4xm             4X Technologies</div><div class="line">  E a64             a64 - video <span class="keyword">for</span> Commodore 64</div><div class="line"> D  aa              Audible AA format files</div><div class="line"> D  aac             raw ADTS AAC (Advanced Audio Coding)</div><div class="line"> DE ac3             raw AC-3</div><div class="line"> D  act             ACT Voice file format</div><div class="line"> D  adf             Artworx Data Format</div><div class="line"> D  adp             ADP</div><div class="line">  E adts            ADTS AAC (Advanced Audio Coding)</div><div class="line"> DE adx             CRI ADX</div><div class="line"> D  aea             MD STUDIO audio</div><div class="line"> D  afc             AFC</div><div class="line"> DE aiff            Audio IFF</div><div class="line"> DE alaw            PCM A-law</div><div class="line"> D  <span class="built_in">alias</span>_pix       Alias/Wavefront PIX image</div><div class="line"> DE amr             3GPP AMR</div><div class="line"> D  anm             Deluxe Paint Animation</div><div class="line"> D  apc             CRYO APC</div><div class="line"> D  ape             Monkey<span class="string">'s Audio</span></div><div class="line"> DE apng            Animated Portable Network Graphics</div><div class="line"> D  aqtitle         AQTitle subtitles</div><div class="line"> DE asf             ASF (Advanced / Active Streaming Format)</div><div class="line"> D  asf_o           ASF (Advanced / Active Streaming Format)</div><div class="line">  E asf_stream      ASF (Advanced / Active Streaming Format)</div><div class="line"> DE ass             SSA (SubStation Alpha) subtitle</div><div class="line"> DE ast             AST (Audio Stream)</div><div class="line"> DE au              Sun AU</div><div class="line"> DE avi             AVI (Audio Video Interleaved)</div><div class="line">  E avm2            SWF (ShockWave Flash) (AVM2)</div><div class="line"> D  avr             AVR (Audio Visual Research)</div><div class="line"> D  avs             AVS</div><div class="line"> D  bethsoftvid     Bethesda Softworks VID</div><div class="line"> D  bfi             Brute Force &amp; Ignorance</div><div class="line"> D  bfstm           BFSTM (Binary Cafe Stream)</div><div class="line"> D  bin             Binary text</div><div class="line"> D  bink            Bink</div><div class="line"> DE bit             G.729 BIT file format</div><div class="line"> D  bmp_pipe        piped bmp sequence</div><div class="line"> D  bmv             Discworld II BMV</div><div class="line"> D  boa             Black Ops Audio</div><div class="line"> D  brender_pix     BRender PIX image</div><div class="line"> D  brstm           BRSTM (Binary Revolution Stream)</div><div class="line"> D  c93             Interplay C93</div><div class="line"> DE caf             Apple CAF (Core Audio Format)</div><div class="line"> DE cavsvideo       raw Chinese AVS (Audio Video Standard) video</div><div class="line"> D  cdg             CD Graphics</div><div class="line"> D  cdxl            Commodore CDXL video</div><div class="line"> D  cine            Phantom Cine</div><div class="line"> D  concat          Virtual concatenation script</div><div class="line">  E crc             CRC testing</div><div class="line">  E dash            DASH Muxer</div><div class="line"> DE data            raw data</div><div class="line"> DE daud            D-Cinema audio</div><div class="line"> D  dds_pipe        piped dds sequence</div><div class="line"> D  dfa             Chronomaster DFA</div><div class="line"> DE dirac           raw Dirac</div><div class="line"> DE dnxhd           raw DNxHD (SMPTE VC-3)</div><div class="line"> D  dpx_pipe        piped dpx sequence</div><div class="line"> D  dsf             DSD Stream File (DSF)</div><div class="line"> D  dsicin          Delphine Software International CIN</div><div class="line"> D  dss             Digital Speech Standard (DSS)</div><div class="line"> DE dts             raw DTS</div><div class="line"> D  dtshd           raw DTS-HD</div><div class="line"> DE dv              DV (Digital Video)</div><div class="line"> D  dv1394          DV1394 A/V grab</div><div class="line"> D  dvbsub          raw dvbsub</div><div class="line">  E dvd             MPEG-2 PS (DVD VOB)</div><div class="line"> D  dxa             DXA</div><div class="line"> D  ea              Electronic Arts Multimedia</div><div class="line"> D  ea_cdata        Electronic Arts cdata</div><div class="line"> DE eac3            raw E-AC-3</div><div class="line"> D  epaf            Ensoniq Paris Audio File</div><div class="line"> D  exr_pipe        piped exr sequence</div><div class="line"> DE f32be           PCM 32-bit floating-point big-endian</div><div class="line"> DE f32le           PCM 32-bit floating-point little-endian</div><div class="line">  E f4v             F4V Adobe Flash Video</div><div class="line"> DE f64be           PCM 64-bit floating-point big-endian</div><div class="line"> DE f64le           PCM 64-bit floating-point little-endian</div><div class="line"> DE fbdev           Linux framebuffer</div><div class="line"> DE ffm             FFM (FFserver live feed)</div><div class="line"> DE ffmetadata      FFmpeg metadata in text</div><div class="line"> D  film_cpk        Sega FILM / CPK</div><div class="line"> DE filmstrip       Adobe Filmstrip</div><div class="line"> DE flac            raw FLAC</div><div class="line"> D  flic            FLI/FLC/FLX animation</div><div class="line"> DE flv             FLV (Flash Video)</div><div class="line">  E framecrc        framecrc testing</div><div class="line">  E framemd5        Per-frame MD5 testing</div><div class="line"> D  frm             Megalux Frame</div><div class="line"> DE g722            raw G.722</div><div class="line"> DE g723_1          raw G.723.1</div><div class="line"> D  g729            G.729 raw format demuxer</div><div class="line"> DE gif             GIF Animation</div><div class="line"> D  gsm             raw GSM</div><div class="line"> DE gxf             GXF (General eXchange Format)</div><div class="line"> DE h261            raw H.261</div><div class="line"> DE h263            raw H.263</div><div class="line"> DE h264            raw H.264 video</div><div class="line">  E hds             HDS Muxer</div><div class="line"> DE hevc            raw HEVC video</div><div class="line">  E hls             Apple HTTP Live Streaming</div><div class="line"> D  hls,applehttp   Apple HTTP Live Streaming</div><div class="line"> D  hnm             Cryo HNM v4</div><div class="line"> DE ico             Microsoft Windows ICO</div><div class="line"> D  idcin           id Cinematic</div><div class="line"> D  idf             iCE Draw File</div><div class="line"> D  iff             IFF (Interchange File Format)</div><div class="line"> DE ilbc            iLBC storage</div><div class="line"> DE image2          image2 sequence</div><div class="line"> DE image2pipe      piped image2 sequence</div><div class="line"> D  ingenient       raw Ingenient MJPEG</div><div class="line"> D  ipmovie         Interplay MVE</div><div class="line">  E ipod            iPod H.264 MP4 (MPEG-4 Part 14)</div><div class="line"> DE ircam           Berkeley/IRCAM/CARL Sound Format</div><div class="line">  E ismv            ISMV/ISMA (Smooth Streaming)</div><div class="line"> D  iss             Funcom ISS</div><div class="line"> D  iv8             IndigoVision 8000 video</div><div class="line"> DE ivf             On2 IVF</div><div class="line"> D  j2k_pipe        piped j2k sequence</div><div class="line"> DE jacosub         JACOsub subtitle format</div><div class="line"> D  jpeg_pipe       piped jpeg sequence</div><div class="line"> D  jpegls_pipe     piped jpegls sequence</div><div class="line"> D  jv              Bitmap Brothers JV</div><div class="line"> DE latm            LOAS/LATM</div><div class="line"> D  lavfi           Libavfilter virtual input device</div><div class="line"> D  live_flv        live RTMP FLV (Flash Video)</div><div class="line"> D  lmlm4           raw lmlm4</div><div class="line"> D  loas            LOAS AudioSyncStream</div><div class="line"> DE lrc             LRC lyrics</div><div class="line"> D  lvf             LVF</div><div class="line"> D  lxf             VR native stream (LXF)</div><div class="line"> DE m4v             raw MPEG-4 video</div><div class="line">  E matroska        Matroska</div><div class="line"> D  matroska,webm   Matroska / WebM</div><div class="line">  E md5             MD5 testing</div><div class="line"> D  mgsts           Metal Gear Solid: The Twin Snakes</div><div class="line"> DE microdvd        MicroDVD subtitle format</div><div class="line"> DE mjpeg           raw MJPEG video</div><div class="line">  E mkvtimestamp_v2 extract pts as timecode v2 format, as defined by mkvtoolnix</div><div class="line"> DE mlp             raw MLP</div><div class="line"> D  mlv             Magic Lantern Video (MLV)</div><div class="line"> D  mm              American Laser Games MM</div><div class="line"> DE mmf             Yamaha SMAF</div><div class="line">  E mov             QuickTime / MOV</div><div class="line"> D  mov,mp4,m4a,3gp,3g2,mj2 QuickTime / MOV</div><div class="line">  E mp2             MP2 (MPEG audio layer 2)</div><div class="line"> DE mp3             MP3 (MPEG audio layer 3)</div><div class="line">  E mp4             MP4 (MPEG-4 Part 14)</div><div class="line"> D  mpc             Musepack</div><div class="line"> D  mpc8            Musepack SV8</div><div class="line"> DE mpeg            MPEG-1 Systems / MPEG program stream</div><div class="line">  E mpeg1video      raw MPEG-1 video</div><div class="line">  E mpeg2video      raw MPEG-2 video</div><div class="line"> DE mpegts          MPEG-TS (MPEG-2 Transport Stream)</div><div class="line"> D  mpegtsraw       raw MPEG-TS (MPEG-2 Transport Stream)</div><div class="line"> D  mpegvideo       raw MPEG video</div><div class="line"> DE mpjpeg          MIME multipart JPEG</div><div class="line"> D  mpl2            MPL2 subtitles</div><div class="line"> D  mpsub           MPlayer subtitles</div><div class="line"> D  msnwctcp        MSN TCP Webcam stream</div><div class="line"> D  mtv             MTV</div><div class="line"> DE mulaw           PCM mu-law</div><div class="line"> D  mv              Silicon Graphics Movie</div><div class="line"> D  mvi             Motion Pixels MVI</div><div class="line"> DE mxf             MXF (Material eXchange Format)</div><div class="line">  E mxf_d10         MXF (Material eXchange Format) D-10 Mapping</div><div class="line">  E mxf_opatom      MXF (Material eXchange Format) Operational Pattern Atom</div><div class="line"> D  mxg             MxPEG clip</div><div class="line"> D  nc              NC camera feed</div><div class="line"> D  nistsphere      NIST SPeech HEader REsources</div><div class="line"> D  nsv             Nullsoft Streaming Video</div><div class="line">  E null            raw null video</div><div class="line"> DE nut             NUT</div><div class="line"> D  nuv             NuppelVideo</div><div class="line">  E oga             Ogg Audio</div><div class="line"> DE ogg             Ogg</div><div class="line"> DE oma             Sony OpenMG audio</div><div class="line">  E opus            Ogg Opus</div><div class="line"> DE oss             OSS (Open Sound System) playback</div><div class="line"> D  paf             Amazing Studio Packed Animation File</div><div class="line"> D  pictor_pipe     piped pictor sequence</div><div class="line"> D  pjs             PJS (Phoenix Japanimation Society) subtitles</div><div class="line"> D  pmp             Playstation Portable PMP</div><div class="line"> D  png_pipe        piped png sequence</div><div class="line">  E psp             PSP MP4 (MPEG-4 Part 14)</div><div class="line"> D  psxstr          Sony Playstation STR</div><div class="line"> D  pva             TechnoTrend PVA</div><div class="line"> D  pvf             PVF (Portable Voice Format)</div><div class="line"> D  qcp             QCP</div><div class="line"> D  qdraw_pipe      piped qdraw sequence</div><div class="line"> D  r3d             REDCODE R3D</div><div class="line"> DE rawvideo        raw video</div><div class="line"> D  realtext        RealText subtitle format</div><div class="line"> D  redspark        RedSpark</div><div class="line"> D  rl2             RL2</div><div class="line"> DE rm              RealMedia</div><div class="line"> DE roq             raw id RoQ</div><div class="line"> D  rpl             RPL / ARMovie</div><div class="line"> D  rsd             GameCube RSD</div><div class="line"> DE rso             Lego Mindstorms RSO</div><div class="line"> DE rtp             RTP output</div><div class="line">  E rtp_mpegts      RTP/mpegts output format</div><div class="line"> DE rtsp            RTSP output</div><div class="line"> DE s16be           PCM signed 16-bit big-endian</div><div class="line"> DE s16le           PCM signed 16-bit little-endian</div><div class="line"> DE s24be           PCM signed 24-bit big-endian</div><div class="line"> DE s24le           PCM signed 24-bit little-endian</div><div class="line"> DE s32be           PCM signed 32-bit big-endian</div><div class="line"> DE s32le           PCM signed 32-bit little-endian</div><div class="line"> DE s8              PCM signed 8-bit</div><div class="line"> D  sami            SAMI subtitle format</div><div class="line"> DE sap             SAP output</div><div class="line"> D  sbg             SBaGen binaural beats script</div><div class="line"> D  sdp             SDP</div><div class="line"> D  sdr2            SDR2</div><div class="line">  E segment         segment</div><div class="line"> D  sgi_pipe        piped sgi sequence</div><div class="line"> D  shn             raw Shorten</div><div class="line"> D  siff            Beam Software SIFF</div><div class="line">  E singlejpeg      JPEG single image</div><div class="line"> D  sln             Asterisk raw pcm</div><div class="line"> DE smjpeg          Loki SDL MJPEG</div><div class="line"> D  smk             Smacker</div><div class="line">  E smoothstreaming Smooth Streaming Muxer</div><div class="line"> D  smush           LucasArts Smush</div><div class="line"> D  sol             Sierra SOL</div><div class="line"> DE sox             SoX native</div><div class="line"> DE spdif           IEC 61937 (used on S/PDIF - IEC958)</div><div class="line">  E spx             Ogg Speex</div><div class="line"> DE srt             SubRip subtitle</div><div class="line"> D  stl             Spruce subtitle format</div><div class="line">  E stream_segment,ssegment streaming segment muxer</div><div class="line"> D  subviewer       SubViewer subtitle format</div><div class="line"> D  subviewer1      SubViewer v1 subtitle format</div><div class="line"> D  sunrast_pipe    piped sunrast sequence</div><div class="line"> D  sup             raw HDMV Presentation Graphic Stream subtitles</div><div class="line">  E svcd            MPEG-2 PS (SVCD)</div><div class="line"> DE swf             SWF (ShockWave Flash)</div><div class="line"> D  tak             raw TAK</div><div class="line"> D  tedcaptions     TED Talks captions</div><div class="line">  E tee             Multiple muxer tee</div><div class="line"> D  thp             THP</div><div class="line"> D  tiertexseq      Tiertex Limited SEQ</div><div class="line"> D  tiff_pipe       piped tiff sequence</div><div class="line"> D  tmv             8088flex TMV</div><div class="line"> DE truehd          raw TrueHD</div><div class="line"> D  tta             TTA (True Audio)</div><div class="line"> D  tty             Tele-typewriter</div><div class="line"> D  txd             Renderware TeXture Dictionary</div><div class="line"> DE u16be           PCM unsigned 16-bit big-endian</div><div class="line"> DE u16le           PCM unsigned 16-bit little-endian</div><div class="line"> DE u24be           PCM unsigned 24-bit big-endian</div><div class="line"> DE u24le           PCM unsigned 24-bit little-endian</div><div class="line"> DE u32be           PCM unsigned 32-bit big-endian</div><div class="line"> DE u32le           PCM unsigned 32-bit little-endian</div><div class="line"> DE u8              PCM unsigned 8-bit</div><div class="line">  E uncodedframecrc uncoded framecrc testing</div><div class="line">  E v4l2            Video4Linux2 output device</div><div class="line"> DE vc1             raw VC-1 video</div><div class="line"> DE vc1test         VC-1 test bitstream</div><div class="line">  E vcd             MPEG-1 Systems / MPEG program stream (VCD)</div><div class="line"> D  video4linux2,v4l2 Video4Linux2 device grab</div><div class="line"> D  vivo            Vivo</div><div class="line"> D  vmd             Sierra VMD</div><div class="line">  E vob             MPEG-2 PS (VOB)</div><div class="line"> D  vobsub          VobSub subtitle format</div><div class="line"> DE voc             Creative Voice</div><div class="line"> D  vplayer         VPlayer subtitles</div><div class="line"> D  vqf             Nippon Telegraph and Telephone Corporation (NTT) TwinVQ</div><div class="line"> DE w64             Sony Wave64</div><div class="line"> DE wav             WAV / WAVE (Waveform Audio)</div><div class="line"> D  wc3movie        Wing Commander III movie</div><div class="line">  E webm            WebM</div><div class="line">  E webm_chunk      WebM Chunk Muxer</div><div class="line"> DE webm_dash_manifest WebM DASH Manifest</div><div class="line">  E webp            WebP</div><div class="line"> D  webp_pipe       piped webp sequence</div><div class="line"> DE webvtt          WebVTT subtitle</div><div class="line"> D  wsaud           Westwood Studios audio</div><div class="line"> D  wsvqa           Westwood Studios VQA</div><div class="line"> DE wtv             Windows Television (WTV)</div><div class="line"> DE wv              raw WavPack</div><div class="line"> D  x11grab         X11 screen capture, using XCB</div><div class="line"> D  xa              Maxis XA</div><div class="line"> D  xbin            eXtended BINary text (XBIN)</div><div class="line"> D  xmv             Microsoft XMV</div><div class="line"> D  xwma            Microsoft xWMA</div><div class="line"> D  yop             Psygnosis YOP</div><div class="line"> DE yuv4mpegpipe    YUV4MPEG pipe</div></pre></td></tr></table></figure></p>
+<p><img src="/PostImage/ffmpeg_structure_decode.jpg" alt="ffmpeg架构图"></p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/devtools/Matlab快捷键/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          Matlab快捷键
+        
+      </div>
+    </a>
+  
+  
+    <a href="/devtools/Hexo博客自己给自己挖的坑之-gitignore/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hexo博客自己给自己挖的坑之.gitignore</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style" style="margin-left:38px">
+		<span class="jiathis_txt">分享到: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+        <a class="jiathis_button_twitter"></a>
+        <a class="jiathis_button_plus"></a> 
+        <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="FFmpeg-基本命令" data-title="FFmpeg 基本命令" data-url="http://cxuef.github.io/devtools/FFmpeg-基本命令/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"eirot"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+        ds.src = 'http://cxuef.github.io/js/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 Eirot Chen
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+		<div class="visit">
+            <span id="busuanzi_container_site_pv" style='display:none'>
+                <span id="site-visit" >小站到访数: 
+                    <span id="busuanzi_value_site_uv" style="font-weight:bold;color:#666666" ></span>
+                </span>
+            </span>
+            <span id="busuanzi_container_page_pv" style='display:none'>
+                <span id="page-visit">, 本页阅读量: 
+                    <span id="busuanzi_value_page_pv" style="font-weight:bold;color:#666666"></span>
+                </span>
+            </span>
+        </div>
+    </div>
+  </div>
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"> </script>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        mathjax: false,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        open_in_new: false
+    }
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+
+<div id="totop" style="position:fixed;bottom:100px;right:8px;cursor: pointer;">
+<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+</div>
+
+<script src="/js/totop.js"></script>
+
+
+  </div>
+</body>
+</html>

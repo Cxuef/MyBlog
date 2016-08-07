@@ -1,0 +1,68 @@
+# Header
+menu:
+  主页: /
+  所有文章: /archives
+  心晴: /categories/心晴
+  Android: /categories/android
+  Linux: /categories/linux
+  Devtools: /categories/devtools
+
+# SubNav
+subnav:
+  github: "https://github.com/Cxuef"
+  google: "https://plus.google.com/u/0/103874083208789016426"
+  oschina: "http://my.oschina.net/eirot"
+  weibo: "http://weibo.com/Cxuef"
+  #rss: "#"
+  #zhihu: "#"
+  #douban: "#"
+  #mail: "XXX@gmail.com"
+  #facebook: "#"
+  #twitter: "#"
+  #linkedin: "#"
+
+rss: /atom.xml
+
+# Content
+excerpt_link: more
+fancybox: true
+mathjax: false
+
+# 是否开启动画效果
+animate: true
+
+# 是否在新窗口打开链接
+open_in_new: false
+
+# Miscellaneous
+google_analytics: false
+
+#开启百度PV统计
+baidu_analytics: true
+
+#网站的icon
+favicon: /img/favicon.png
+
+#你的头像url
+avatar: /img/eirot66.jpg
+
+#是否开启分享
+share_jia: true
+share_addthis: false
+#是否开启多说评论，填写你在多说申请的项目名称 duoshuo: duoshuo-key
+#若使用disqus，请在博客config文件中填写disqus_shortname，并关闭多说评论
+duoshuo: true
+#是否开启云标签
+tagcloud: true
+
+#是否开启友情链接
+#不开启——
+friends: false
+#开启——
+#friends:
+#  litten的博客: http://litten.github.io/
+#  简书: http://www.jianshu.com/
+
+#是否开启“关于我”。
+#aboutme: false
+aboutme: 西南大学2011级，90后爱幻想的双鱼座普通男青年。目前就职于四川成都Sioeye，任职Android 开发工程师。游弋于代码之间，爱捣鼓，爱瞎想，更爱技术的纯粹。热爱开源技术，CV爱好者~
