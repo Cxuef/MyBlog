@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!--
+  
+	     _.' __  `.  
+	 .--(#)(##)---/#\  
+	.' @          /###\  
+	:         ,   #####  
+	`-..__.-' _.-\###/    
+	    `;_:    `"'  
+	    .'"""""`.  
+	   /, 加☺油 ,\
+	  //  Eirot  \\  
+	  `-._______.-'  
+	  ___`. | .'___  
+	 (______|______) 
+			 
+  -->
+  <!-- (你瞅啥呢，不要偷看我(⊙o⊙)哦) by Eirot Chen on 2016-02-18 -->
+  
+  <meta name="baidu-site-verification" content="oOAZ6WWAUS" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>The Android Widget Of Calculator | Welcome to my blog ~</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="在开始之前还是先了解下什么是widget吧？！其实对于Widget我们就可以简单明了地理解为一个快捷的小插件，我们经常看见的桌面天气、时钟、音乐这些就是啦。当我们需要添加widget时，只需要长按launcher界面的空白处选择WIDGETS即可看见APP的预置widget，然后选择一个自己想要的长按拖动到launcher即可。下面我就以计算器的widget为例，大概阐述下开发widget的流程。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="The Android Widget Of Calculator">
+<meta property="og:url" content="http://cxuef.github.io/android/The-Android-Widget-Of-Calculator/index.html">
+<meta property="og:site_name" content="Welcome to my blog ~">
+<meta property="og:description" content="在开始之前还是先了解下什么是widget吧？！其实对于Widget我们就可以简单明了地理解为一个快捷的小插件，我们经常看见的桌面天气、时钟、音乐这些就是啦。当我们需要添加widget时，只需要长按launcher界面的空白处选择WIDGETS即可看见APP的预置widget，然后选择一个自己想要的长按拖动到launcher即可。下面我就以计算器的widget为例，大概阐述下开发widget的流程。">
+<meta property="og:image" content="http://cxuef.github.io/PostImage/widget1.png">
+<meta property="og:image" content="http://cxuef.github.io/PostImage/widget2.png">
+<meta property="og:updated_time" content="2016-07-02T10:29:03.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="The Android Widget Of Calculator">
+<meta name="twitter:description" content="在开始之前还是先了解下什么是widget吧？！其实对于Widget我们就可以简单明了地理解为一个快捷的小插件，我们经常看见的桌面天气、时钟、音乐这些就是啦。当我们需要添加widget时，只需要长按launcher界面的空白处选择WIDGETS即可看见APP的预置widget，然后选择一个自己想要的长按拖动到launcher即可。下面我就以计算器的widget为例，大概阐述下开发widget的流程。">
+<meta name="twitter:image" content="http://cxuef.github.io/PostImage/widget1.png">
+  
+    <link rel="alternative" href="/atom.xml" title="Welcome to my blog ~" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?819b1c6493df653afb8c784db6";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="/img/eirot66.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Eirot Chen</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">世界上最幸福的事莫过于有能力做自己喜欢的事！</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+							<li><a href="/categories/心晴">心晴</a></li>
+				        
+							<li><a href="/categories/android">Android</a></li>
+				        
+							<li><a href="/categories/linux">Linux</a></li>
+				        
+							<li><a href="/categories/devtools">Devtools</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/Cxuef" title="github">github</a>
+					        
+								<a class="google" target="_blank" href="https://plus.google.com/u/0/103874083208789016426" title="google">google</a>
+					        
+								<a class="oschina" target="_blank" href="http://my.oschina.net/eirot" title="oschina">oschina</a>
+					        
+								<a class="weibo" target="_blank" href="http://weibo.com/Cxuef" title="weibo">weibo</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/Activity/" style="font-size: 10px;">Activity</a> <a href="/tags/Android-N-Preview/" style="font-size: 10px;">Android N Preview</a> <a href="/tags/Android-Studio/" style="font-size: 10px;">Android Studio</a> <a href="/tags/DeskClock/" style="font-size: 10px;">DeskClock</a> <a href="/tags/Fragment/" style="font-size: 10px;">Fragment</a> <a href="/tags/Hexo/" style="font-size: 20px;">Hexo</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/OpenCV/" style="font-size: 10px;">OpenCV</a> <a href="/tags/Shadowsocks/" style="font-size: 10px;">Shadowsocks</a> <a href="/tags/Sublime-Text-3/" style="font-size: 10px;">Sublime Text 3</a> <a href="/tags/adb/" style="font-size: 10px;">adb</a> <a href="/tags/android/" style="font-size: 15px;">android</a> <a href="/tags/apk/" style="font-size: 10px;">apk</a> <a href="/tags/ccache/" style="font-size: 10px;">ccache</a> <a href="/tags/devtools/" style="font-size: 10px;">devtools</a> <a href="/tags/ffmpeg/" style="font-size: 15px;">ffmpeg</a> <a href="/tags/google-play/" style="font-size: 10px;">google play</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/matlab/" style="font-size: 10px;">matlab</a> <a href="/tags/mount/" style="font-size: 10px;">mount</a> <a href="/tags/music/" style="font-size: 15px;">music</a> <a href="/tags/nginx/" style="font-size: 10px;">nginx</a> <a href="/tags/rtmp/" style="font-size: 10px;">rtmp</a> <a href="/tags/widget/" style="font-size: 10px;">widget</a> <a href="/tags/个人小站/" style="font-size: 10px;">个人小站</a> <a href="/tags/旅行/" style="font-size: 10px;">旅行</a> <a href="/tags/自定义View/" style="font-size: 10px;">自定义View</a> <a href="/tags/诗词/" style="font-size: 10px;">诗词</a> <a href="/tags/遇见/" style="font-size: 10px;">遇见</a>
+					</div>
+				</section>
+				
+				
+				
+
+				
+				
+				<section class="switch-part switch-part3">
+				
+					<div id="js-aboutme">西南大学2011级，90后爱幻想的双鱼座普通男青年。目前就职于四川成都Sioeye，任职Android 开发工程师。游弋于代码之间，爱捣鼓，爱瞎想，更爱技术的纯粹。热爱开源技术，CV爱好者~</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Eirot Chen</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<a href="/" class="profilepic">
+			
+				<img lazy-src="/img/eirot66.jpg" class="js-avatar">
+			
+			</a>
+			<hgroup>
+			  <h1 class="header-author">Eirot Chen</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">世界上最幸福的事莫过于有能力做自己喜欢的事！</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+					<li><a href="/categories/心晴">心晴</a></li>
+		        
+					<li><a href="/categories/android">Android</a></li>
+		        
+					<li><a href="/categories/linux">Linux</a></li>
+		        
+					<li><a href="/categories/devtools">Devtools</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/Cxuef" title="github">github</a>
+			        
+						<a class="google" target="_blank" href="https://plus.google.com/u/0/103874083208789016426" title="google">google</a>
+			        
+						<a class="oschina" target="_blank" href="http://my.oschina.net/eirot" title="oschina">oschina</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/Cxuef" title="weibo">weibo</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-The-Android-Widget-Of-Calculator" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/android/The-Android-Widget-Of-Calculator/" class="article-date">
+  	<time datetime="2016-07-04T02:55:37.000Z" itemprop="datePublished">2016-07-04</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      The Android Widget Of Calculator
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/">android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/widget/">widget</a></li></ul>
+	</div>
+
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/android/">android</a>
+	</div>
+
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+		<!-- Table of Contents aadd by eirot chen 20160217-->
+		
+
+        <script src="/assets/js/APlayer.min.js"> </script><p>在开始之前还是先了解下什么是widget吧？！其实对于Widget我们就可以简单明了地理解为一个快捷的小插件，我们经常看见的桌面天气、时钟、音乐这些就是啦。当我们需要添加widget时，只需要长按launcher界面的空白处选择WIDGETS即可看见APP的预置widget，然后选择一个自己想要的长按拖动到launcher即可。下面我就以计算器的widget为例，大概阐述下开发widget的流程。</p>
+<p><img src="/PostImage/widget1.png" alt="widget1.png">  <img src="/PostImage/widget2.png" alt="widget2.png"></p>
+<a id="more"></a>
+<h2 id="1-AndroidManifest-xml中申明widget"><a href="#1-AndroidManifest-xml中申明widget" class="headerlink" title="1. AndroidManifest.xml中申明widget"></a>1. AndroidManifest.xml中申明widget</h2><p><a href="http://10.120.10.101/source/xref/msm8939_r3_ap_2-1/packages/apps/Calculator/AndroidManifest.xml" target="_blank" rel="external">http://10.120.10.101/source/xref/msm8939_r3_ap_2-1/packages/apps/Calculator/AndroidManifest.xml</a><br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- Receiver for the widget --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">receiverandroid:name=".widget.CalculatorWidget"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">intent-filter</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">action</span> <span class="attr">android:name</span>=<span class="string">"android.appwidget.action.APPWIDGET_UPDATE"</span> /&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">intent-filter</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">meta-data</span> <span class="attr">android:name</span>=<span class="string">"android.appwidget.provider"</span></span></div><div class="line">        <span class="attr">android:resource</span>=<span class="string">"@xml/calculator_widget_info"</span> /&gt;</div><div class="line"><span class="tag">&lt;/<span class="name">receiver</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<h2 id="2-添加MetaData对应的AppWidgetProviderInfo描述"><a href="#2-添加MetaData对应的AppWidgetProviderInfo描述" class="headerlink" title="2. 添加MetaData对应的AppWidgetProviderInfo描述"></a>2. 添加MetaData对应的AppWidgetProviderInfo描述</h2><p><a href="http://10.120.10.101/source/xref/msm8939_r3_ap_2-1/packages/apps/Calculator/res/xml/calculator_widget_info.xml" target="_blank" rel="external">http://10.120.10.101/source/xref/msm8939_r3_ap_2-1/packages/apps/Calculator/res/xml/calculator_widget_info.xml</a><br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">appwidget-provider</span> <span class="attr">xmlns:android</span>=<span class="string">"http://schemas.android.com/apk/res/android"</span></span></div><div class="line">    <span class="attr">android:initialKeyguardLayout</span>=<span class="string">"@layout/widget"</span></div><div class="line">    <span class="attr">android:initialLayout</span>=<span class="string">"@layout/widget"</span></div><div class="line">    <span class="attr">android:minHeight</span>=<span class="string">"250dp"</span></div><div class="line">    <span class="attr">android:minWidth</span>=<span class="string">"250dp"</span></div><div class="line">    <span class="attr">android:previewImage</span>=<span class="string">"@drawable/widget_preview"</span></div><div class="line">    <span class="attr">android:resizeMode</span>=<span class="string">"vertical"</span></div><div class="line">    <span class="attr">android:updatePeriodMillis</span>=<span class="string">"0"</span></div><div class="line">    <span class="attr">android:widgetCategory</span>=<span class="string">"home_screen|keyguard"</span> /&gt;</div></pre></td></tr></table></figure></p>
+<h2 id="3-自定义widget-xml布局"><a href="#3-自定义widget-xml布局" class="headerlink" title="3. 自定义widget xml布局"></a>3. 自定义widget xml布局</h2><p><a href="http://10.120.10.101/source/xref/msm8939_r3_ap_2-1/packages/apps/Calculator/res/layout/widget.xml" target="_blank" rel="external">http://10.120.10.101/source/xref/msm8939_r3_ap_2-1/packages/apps/Calculator/res/layout/widget.xml</a><br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div></pre></td><td class="code"><pre><div class="line">&lt;?xmlversion="1.0"encoding="utf-8"?&gt;</div><div class="line"><span class="tag">&lt;<span class="name">RelativeLayout</span> <span class="attr">xmlns:android</span>=<span class="string">"http://schemas.android.com/apk/res/android"</span></span></div><div class="line">        <span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></div><div class="line">        <span class="attr">android:layout_height</span>=<span class="string">"match_parent"</span>&gt;</div><div class="line">    <span class="tag">&lt;<span class="name">LinearLayout</span> <span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></span></div><div class="line">        <span class="attr">android:layout_height</span>=<span class="string">"match_parent"</span></div><div class="line">        <span class="attr">android:orientation</span>=<span class="string">"vertical"</span>&gt;</div><div class="line">        <span class="tag">&lt;<span class="name">LinearLayout</span> <span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></span></div><div class="line">            <span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></div><div class="line">            <span class="attr">android:background</span>=<span class="string">"@drawable/line"</span></div><div class="line">            <span class="attr">android:minHeight</span>=<span class="string">"60dp"</span></div><div class="line">            <span class="attr">android:orientation</span>=<span class="string">"horizontal"</span>&gt;</div><div class="line">         <span class="tag">&lt;<span class="name">LinearLayout</span> <span class="attr">android:layout_width</span>=<span class="string">"0dp"</span></span></div><div class="line">            <span class="attr">android:layout_height</span>=<span class="string">"match_parent"</span></div><div class="line">            <span class="attr">android:layout_weight</span>=<span class="string">"3"</span>&gt;</div><div class="line">                <span class="tag">&lt;<span class="name">TextView</span> <span class="attr">android:id</span>=<span class="string">"@+id/display"</span></span></div><div class="line">                    <span class="attr">style</span>=<span class="string">"@style/Theme.Calculator.Display.Widget"</span></div><div class="line">                    <span class="attr">android:layout_width</span>=<span class="string">"wrap_content"</span></div><div class="line">                    <span class="attr">android:layout_height</span>=<span class="string">"match_parent"</span></div><div class="line">                    <span class="attr">android:gravity</span>=<span class="string">"right|center_vertical"</span></div><div class="line">                    <span class="attr">android:longClickable</span>=<span class="string">"false"</span></div><div class="line">                    <span class="attr">android:visibility</span>=<span class="string">"gone"</span> /&gt;</div><div class="line">                    .</div><div class="line">                    .</div><div class="line">                    .</div><div class="line">                <span class="tag">&lt;<span class="name">Button</span></span></div><div class="line">                    <span class="attr">android:id</span>=<span class="string">"@+id/plus"</span></div><div class="line">                    <span class="attr">style</span>=<span class="string">"@style/Theme.Calculator.ButtonStyle.Widget"</span></div><div class="line">                    <span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></div><div class="line">                    <span class="attr">android:layout_height</span>=<span class="string">"match_parent"</span></div><div class="line">                    <span class="attr">android:layout_weight</span>=<span class="string">"1"</span></div><div class="line">                    <span class="attr">android:text</span>=<span class="string">"@string/op_add"</span> /&gt;</div><div class="line">           <span class="tag">&lt;/<span class="name">LinearLayout</span>&gt;</span></div><div class="line">       <span class="tag">&lt;/<span class="name">LinearLayout</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">LinearLayout</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">RelativeLayout</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>注意，这里的APP Widget Layout都是基于RemoteViews的，并不是支持所有的layout和widget。<br>A RemoteViews object (and, consequently, an App Widget) can support the following layout classes:</p>
+<p><a href="https://developer.android.com/reference/android/widget/FrameLayout.html" target="_blank" rel="external">FrameLayout</a>  <a href="https://developer.android.com/reference/android/widget/LinearLayout.html" target="_blank" rel="external">LinearLayout</a>  <a href="https://developer.android.com/reference/android/widget/RelativeLayout.html" target="_blank" rel="external">RelativeLayout</a>  <a href="https://developer.android.com/reference/android/widget/GridLayout.html" target="_blank" rel="external">GridLayout</a></p>
+<p>And the following widget classes:</p>
+<p><a href="https://developer.android.com/reference/android/widget/AnalogClock.html" target="_blank" rel="external">AnalogClock</a>  <a href="https://developer.android.com/reference/android/widget/Button.html" target="_blank" rel="external">Button</a>  <a href="https://developer.android.com/reference/android/widget/Chronometer.html" target="_blank" rel="external">Chronometer</a>  <a href="https://developer.android.com/reference/android/widget/ImageButton.html" target="_blank" rel="external">ImageButton</a></p>
+<p><a href="https://developer.android.com/reference/android/widget/ImageView.html" target="_blank" rel="external">ImageView</a>  <a href="https://developer.android.com/reference/android/widget/ProgressBar.html" target="_blank" rel="external">ProgressBar</a>  <a href="https://developer.android.com/reference/android/widget/TextView.html" target="_blank" rel="external">TextView</a>  <a href="https://developer.android.com/reference/android/widget/ViewFlipper.html" target="_blank" rel="external">ViewFlipper</a></p>
+<p><a href="https://developer.android.com/reference/android/widget/ListView.html" target="_blank" rel="external">ListView</a>  <a href="https://developer.android.com/reference/android/widget/GridView.html" target="_blank" rel="external">GridView</a>  <a href="https://developer.android.com/reference/android/widget/StackView.html" target="_blank" rel="external">StackView</a>  <a href="https://developer.android.com/reference/android/widget/AdapterViewFlipper.html" target="_blank" rel="external">AdapterViewFlipper</a></p>
+<p>Descendants of these classes are not supported.<br>RemoteViews also supports ViewStub, which is an invisible, zero-sized View you can use to lazily inflate layout resources at runtime.</p>
+<h2 id="4-提供AppWidgetProvider实现"><a href="#4-提供AppWidgetProvider实现" class="headerlink" title="4. 提供AppWidgetProvider实现"></a>4. 提供AppWidgetProvider实现</h2><p><a href="http://10.120.10.101/source/xref/msm8939_r3_ap_2-1/packages/apps/Calculator/src/com/android/calculator2/widget/CalculatorWidget.java" target="_blank" rel="external">http://10.120.10.101/source/xref/msm8939_r3_ap_2-1/packages/apps/Calculator/src/com/android/calculator2/widget/CalculatorWidget.java</a><br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div></pre></td><td class="code"><pre><div class="line">publicclassCalculatorWidgetextendsAppWidgetProvider &#123;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onReceive</span><span class="params">(Contextcontext, Intentintent)</span> </span>&#123;</div><div class="line">        <span class="keyword">int</span> appWidgetId = intent.getIntExtra(AppWidgetManager.EXTRA_APPWIDGET_ID, <span class="number">0</span>);</div><div class="line">        Stringvalue = getValue(context, appWidgetId);</div><div class="line">        <span class="keyword">if</span>(value.equals(context.getResources().getString(R.string.error_syntax))) value = <span class="string">""</span>;</div><div class="line">        mClearText = intent.getBooleanExtra(SHOW_CLEAR, <span class="keyword">false</span>);</div><div class="line">        <span class="keyword">final</span> Context c = context;</div><div class="line"></div><div class="line">        <span class="keyword">if</span>(intent.getAction().equals(DIGIT_0)) &#123;</div><div class="line">            <span class="keyword">if</span>(mClearText) &#123;</div><div class="line">                value = <span class="string">""</span>;</div><div class="line">                mClearText = <span class="keyword">false</span>;</div><div class="line">            &#125;</div><div class="line">            value += <span class="string">"0"</span>;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        AppWidgetManager appWidgetManager = AppWidgetManager.getInstance(context);</div><div class="line">        <span class="keyword">int</span>[] appWidgetIds = appWidgetManager.getAppWidgetIds(newComponentName(context, CalculatorWidget.class));</div><div class="line">        <span class="keyword">for</span>(intappWidgetID : appWidgetIds) &#123;</div><div class="line">            updateAppWidget(context, appWidgetManager, appWidgetID);</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">super</span>.onReceive(context, intent);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onUpdate</span><span class="params">(Contextcontext, AppWidgetManagerappWidgetManager, <span class="keyword">int</span>[] appWidgetIds)</span> </span>&#123;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> appWidgetID : appWidgetIds) &#123;</div><div class="line">            updateAppWidget(context, appWidgetManager, appWidgetID);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">updateAppWidget</span><span class="params">(Contextcontext, AppWidgetManagerappWidgetManager, intappWidgetId)</span> </span>&#123;</div><div class="line">        RemoteViews remoteViews = <span class="keyword">new</span> RemoteViews(context.getPackageName(), R.layout.widget);</div><div class="line"></div><div class="line">        Stringvalue = getValue(context, appWidgetId);</div><div class="line"></div><div class="line">        EquationFormatterformatter = <span class="keyword">new</span> EquationFormatter();</div><div class="line">        value = value.trim();</div><div class="line">        value = formatter.addComas(newSolver(), value);</div><div class="line"></div><div class="line">        <span class="keyword">int</span> displayId = android.os.Build.VERSION.SDK_INT &gt;</div><div class="line">            android.os.Build.VERSION_CODES.JELLY_BEAN_MR1 ? R.id.display_long_clickable : R.id.display;</div><div class="line"></div><div class="line">        remoteViews.setViewVisibility(displayId, View.VISIBLE);</div><div class="line">        remoteViews.setTextViewText(displayId, value);</div><div class="line">        remoteViews.setTextViewText(R.id.display, value);</div><div class="line">        remoteViews.setViewVisibility(R.id.delete, mClearText ? View.GONE : View.VISIBLE);</div><div class="line">        remoteViews.setViewVisibility(R.id.clear, mClearText ? View.VISIBLE : View.GONE);</div><div class="line">        setOnClickListeners(context, appWidgetId, remoteViews);</div><div class="line"></div><div class="line">        <span class="keyword">try</span> &#123;</div><div class="line">            appWidgetManager.updateAppWidget(appWidgetId, remoteViews);</div><div class="line">        &#125; <span class="keyword">catch</span>(Exception e) &#123;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>AppWidgetProvider主要实现以下几个方法：</p>
+<ul>
+<li><p>onUpdate()</p>
+</li>
+<li><p>onAppWidgetOptionsChanged()</p>
+</li>
+<li><p>onDeleted(Context, int[])</p>
+</li>
+<li><p>onEnabled(Context)</p>
+</li>
+<li><p>onDisabled(Context)</p>
+</li>
+<li><p>onReceive(Context, Intent)</p>
+</li>
+</ul>
+<p>这里最主要的最是实现onUpdate（）方法，用于更新和展示我们的数据！</p>
+<h2 id="5-参考文档"><a href="#5-参考文档" class="headerlink" title="5. 参考文档"></a>5. 参考文档</h2><p><a href="https://developer.android.com/design/patterns/widgets.html" target="_blank" rel="external">https://developer.android.com/design/patterns/widgets.html</a></p>
+<p><a href="https://developer.android.com/guide/topics/appwidgets/index.html" target="_blank" rel="external">https://developer.android.com/guide/topics/appwidgets/index.html</a></p>
+<p><a href="https://developer.android.com/guide/practices/ui_guidelines/widget_design.html" target="_blank" rel="external">https://developer.android.com/guide/practices/ui_guidelines/widget_design.html</a></p>
+<p><a href="http://blog.csdn.net/jjwwmlp456/article/details/38466969" target="_blank" rel="external">http://blog.csdn.net/jjwwmlp456/article/details/38466969</a></p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/android/DeskClock根据时间变换背景颜色/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          DeskClock根据时间变换背景颜色
+        
+      </div>
+    </a>
+  
+  
+    <a href="/android/Nexus-5X-刷入Android-N-Preview动手实践/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Nexus 5X 刷入Android N Preview动手实践</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style" style="margin-left:38px">
+		<span class="jiathis_txt">分享到: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+        <a class="jiathis_button_twitter"></a>
+        <a class="jiathis_button_plus"></a> 
+        <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="The-Android-Widget-Of-Calculator" data-title="The Android Widget Of Calculator" data-url="http://cxuef.github.io/android/The-Android-Widget-Of-Calculator/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"eirot"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+        ds.src = 'http://cxuef.github.io/js/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 Eirot Chen
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+		<div class="visit">
+            <span id="busuanzi_container_site_pv" style='display:none'>
+                <span id="site-visit" >小站到访数: 
+                    <span id="busuanzi_value_site_uv" style="font-weight:bold;color:#666666" ></span>
+                </span>
+            </span>
+            <span id="busuanzi_container_page_pv" style='display:none'>
+                <span id="page-visit">, 本页阅读量: 
+                    <span id="busuanzi_value_page_pv" style="font-weight:bold;color:#666666"></span>
+                </span>
+            </span>
+        </div>
+    </div>
+  </div>
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"> </script>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        mathjax: false,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        open_in_new: false
+    }
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+
+<div id="totop" style="position:fixed;bottom:100px;right:8px;cursor: pointer;">
+<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+</div>
+
+<script src="/js/totop.js"></script>
+
+
+  </div>
+</body>
+</html>
