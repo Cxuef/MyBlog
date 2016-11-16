@@ -146,7 +146,7 @@ var _hmt = _hmt || [];
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/Activity/" style="font-size: 10px;">Activity</a> <a href="/tags/Android-N-Preview/" style="font-size: 10px;">Android N Preview</a> <a href="/tags/Android-Studio/" style="font-size: 10px;">Android Studio</a> <a href="/tags/Fragment/" style="font-size: 10px;">Fragment</a> <a href="/tags/Hexo/" style="font-size: 20px;">Hexo</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/OpenCV/" style="font-size: 10px;">OpenCV</a> <a href="/tags/Shadowsocks/" style="font-size: 10px;">Shadowsocks</a> <a href="/tags/Sublime-Text-3/" style="font-size: 10px;">Sublime Text 3</a> <a href="/tags/adb/" style="font-size: 10px;">adb</a> <a href="/tags/android/" style="font-size: 10px;">android</a> <a href="/tags/apk/" style="font-size: 10px;">apk</a> <a href="/tags/ccache/" style="font-size: 10px;">ccache</a> <a href="/tags/devtools/" style="font-size: 10px;">devtools</a> <a href="/tags/ffmpeg/" style="font-size: 10px;">ffmpeg</a> <a href="/tags/google-play/" style="font-size: 10px;">google play</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/matlab/" style="font-size: 10px;">matlab</a> <a href="/tags/mount/" style="font-size: 10px;">mount</a> <a href="/tags/music/" style="font-size: 15px;">music</a> <a href="/tags/个人小站/" style="font-size: 10px;">个人小站</a> <a href="/tags/旅行/" style="font-size: 10px;">旅行</a> <a href="/tags/自定义View/" style="font-size: 10px;">自定义View</a> <a href="/tags/诗词/" style="font-size: 10px;">诗词</a> <a href="/tags/遇见/" style="font-size: 10px;">遇见</a>
+						<a href="/tags/Activity/" style="font-size: 10px;">Activity</a> <a href="/tags/Android-N-Preview/" style="font-size: 10px;">Android N Preview</a> <a href="/tags/Android-Studio/" style="font-size: 15px;">Android Studio</a> <a href="/tags/DeskClock/" style="font-size: 10px;">DeskClock</a> <a href="/tags/Fragment/" style="font-size: 10px;">Fragment</a> <a href="/tags/Hexo/" style="font-size: 20px;">Hexo</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/OpenCV/" style="font-size: 15px;">OpenCV</a> <a href="/tags/Shadowsocks/" style="font-size: 10px;">Shadowsocks</a> <a href="/tags/Sublime-Text-3/" style="font-size: 10px;">Sublime Text 3</a> <a href="/tags/adb/" style="font-size: 10px;">adb</a> <a href="/tags/android/" style="font-size: 15px;">android</a> <a href="/tags/apk/" style="font-size: 10px;">apk</a> <a href="/tags/ccache/" style="font-size: 10px;">ccache</a> <a href="/tags/devtools/" style="font-size: 10px;">devtools</a> <a href="/tags/ffmpeg/" style="font-size: 15px;">ffmpeg</a> <a href="/tags/google-play/" style="font-size: 10px;">google play</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/matlab/" style="font-size: 10px;">matlab</a> <a href="/tags/mount/" style="font-size: 10px;">mount</a> <a href="/tags/music/" style="font-size: 15px;">music</a> <a href="/tags/nginx/" style="font-size: 10px;">nginx</a> <a href="/tags/rtmp/" style="font-size: 10px;">rtmp</a> <a href="/tags/widget/" style="font-size: 10px;">widget</a> <a href="/tags/个人小站/" style="font-size: 10px;">个人小站</a> <a href="/tags/旅行/" style="font-size: 10px;">旅行</a> <a href="/tags/自定义View/" style="font-size: 10px;">自定义View</a> <a href="/tags/诗词/" style="font-size: 10px;">诗词</a> <a href="/tags/遇见/" style="font-size: 10px;">遇见</a>
 					</div>
 				</section>
 				
@@ -222,11 +222,11 @@ var _hmt = _hmt || [];
 
       <div class="body-wrap">
   
-    <article id="post-just" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-【置顶】搭建nginx-rtmp直播服务器，ffmpeg模拟推流" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/心晴/just/" class="article-date">
-  	<time datetime="2016-08-07T03:31:12.000Z" itemprop="datePublished">2016-08-07</time>
+      <a href="/linux/【置顶】搭建nginx-rtmp直播服务器，ffmpeg模拟推流/" class="article-date">
+  	<time datetime="2076-02-26T01:21:22.000Z" itemprop="datePublished">2076-02-26</time>
 </a>
     </div>
   
@@ -239,7 +239,7 @@ var _hmt = _hmt || [];
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/心晴/just/">just</a>
+      <a class="article-title" href="/linux/【置顶】搭建nginx-rtmp直播服务器，ffmpeg模拟推流/">【置顶】搭建nginx rtmp直播服务器，ffmpeg模拟推流</a>
     </h1>
   
 
@@ -248,23 +248,223 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-		<!-- Table of Contents aadd by eirot chen 20160217-->
-		
-
-        <script src="/assets/js/APlayer.min.js"> </script><p>nfwanfwewfhh</p>
-
+        <p>Nginx本身是一个非常出色的HTTP服务器，FFMPEG是非常好的音视频解决方案。这两个东西通过一个nginx的模块nginx-rtmp-module，组合在一起即可以搭建一个功能相对比较完善并可支持RTMP和HLS的流媒体服务器。<br>nginx配合ffmpeg做流媒体服务器的原理是：nginx通过rtmp模块提供rtmp服务，ffmpeg推送一个rtmp流到nginx，然后客户端通过访问nginx来收看实时视频流。HLS也是差不多的原理，只是最终客户端是通过HTTP协议来访问的,但是ffmpeg推送流仍然是rtmp的。</p>
+<p><img src="/PostImage/nginx_rtmp_ffmpeg_0.png" alt="流媒体服务器原理"></p>
       
     </div>
     
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ffmpeg/">ffmpeg</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nginx/">nginx</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/rtmp/">rtmp</a></li></ul>
+	</div>
+
       
 	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/心晴/">心晴</a>
+	<a class="article-category-link" href="/categories/linux/">linux</a>
 	</div>
 
 
+      
+        <p class="article-more-link">
+          <a  href="/linux/【置顶】搭建nginx-rtmp直播服务器，ffmpeg模拟推流/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-在AS上使用纯java方式调用OpenCV" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/android/在AS上使用纯java方式调用OpenCV/" class="article-date">
+  	<time datetime="2016-11-16T06:59:59.000Z" itemprop="datePublished">2016-11-16</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/android/在AS上使用纯java方式调用OpenCV/">在AS上使用纯java方式调用OpenCV</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>如果你想在Android Studio上开发OpenCV应用,那么本文就是这里的一小步。下面我将分四点讲解如何在Android studio下将一张彩色的美女图利用OpenCV变成灰度图，详情请点more</p>
+<p><img src="/PostImage/ASOpenCVJava.png" alt="Android Studio + OpenCV + java"><br>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android-Studio/">Android Studio</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/OpenCV/">OpenCV</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/android/">android</a>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a  href="/android/在AS上使用纯java方式调用OpenCV/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-DeskClock根据时间变换背景颜色" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/android/DeskClock根据时间变换背景颜色/" class="article-date">
+  	<time datetime="2016-07-06T09:54:43.000Z" itemprop="datePublished">2016-07-06</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/android/DeskClock根据时间变换背景颜色/">DeskClock根据时间变换背景颜色</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>DeskClock.java是入口Activity，它继承于BaseActivity。那么真正完成根据时间换色的就是在这里了，Let’s have a look !<br>在BaseActivity的onCreate和onResume中分别都有setBackgroundColor（），这是改变颜色的关键所在！只是需要你决定在什么时候调用这个函数哦，然后就是从数组中取出对应时间点的十六进制颜色值。</p>
+<p><img src="/PostImage/DeskClock.png" alt="DeskClock"></p>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/DeskClock/">DeskClock</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/android/">android</a>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a  href="/android/DeskClock根据时间变换背景颜色/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-The-Android-Widget-Of-Calculator" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/android/The-Android-Widget-Of-Calculator/" class="article-date">
+  	<time datetime="2016-07-04T02:55:37.000Z" itemprop="datePublished">2016-07-04</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/android/The-Android-Widget-Of-Calculator/">The Android Widget Of Calculator</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在开始之前还是先了解下什么是widget吧？！其实对于Widget我们就可以简单明了地理解为一个快捷的小插件，我们经常看见的桌面天气、时钟、音乐这些就是啦。当我们需要添加widget时，只需要长按launcher界面的空白处选择WIDGETS即可看见APP的预置widget，然后选择一个自己想要的长按拖动到launcher即可。下面我就以计算器的widget为例，大概阐述下开发widget的流程。</p>
+<p><img src="/PostImage/widget1.png" alt="widget1.png">  <img src="/PostImage/widget2.png" alt="widget2.png"></p>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/">android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/widget/">widget</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/android/">android</a>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a  href="/android/The-Android-Widget-Of-Calculator/#more">more >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
@@ -485,201 +685,6 @@ var _hmt = _hmt || [];
         <p class="article-more-link">
           <a  href="/android/Android-Studio-Tip-of-the-Day/#more">more >></a>
         </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-实用的小众工具，赶紧get吧" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/devtools/实用的小众工具，赶紧get吧/" class="article-date">
-  	<time datetime="2016-03-28T12:24:36.000Z" itemprop="datePublished">2016-03-28</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/devtools/实用的小众工具，赶紧get吧/">实用的小众工具，赶紧get吧</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-		<!-- Table of Contents aadd by eirot chen 20160217-->
-		
-
-        <script src="/assets/js/APlayer.min.js"> </script><p>Helpful software</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/devtools/">devtools</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/devtools/">devtools</a>
-	</div>
-
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-Android-自定义View之Dialog使用RelativeLayout布局无法全屏显示" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/android/Android-自定义View之Dialog使用RelativeLayout布局无法全屏显示/" class="article-date">
-  	<time datetime="2016-03-18T07:13:09.000Z" itemprop="datePublished">2016-03-18</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/android/Android-自定义View之Dialog使用RelativeLayout布局无法全屏显示/">Android 自定义View之Dialog使用RelativeLayout布局无法全屏显示</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="1-问题描述"><a href="#1-问题描述" class="headerlink" title="1. 问题描述"></a>1. 问题描述</h2><p>现在需要弹出一个自定义的Dialog，里面有两张ImageView和两个TextView，分别用于存放生成的二维码、X关闭和WiFi Hotspot信息显示。需要呈现的UI界面如下：</p>
-<p><img src="/PostImage/QrbarcodeUI.png" alt="QrbarcodeUI"></p>
-<h2 id="2-布局文件和QRDialog-style展示"><a href="#2-布局文件和QRDialog-style展示" class="headerlink" title="2. 布局文件和QRDialog style展示"></a>2. 布局文件和QRDialog style展示</h2><p>先看布局文件settings_hotspot.xml</p>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/">android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/自定义View/">自定义View</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/android/">android</a>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a  href="/android/Android-自定义View之Dialog使用RelativeLayout布局无法全屏显示/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-如何下载Google-play上的最新应用" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/android/如何下载Google-play上的最新应用/" class="article-date">
-  	<time datetime="2016-03-08T07:26:04.000Z" itemprop="datePublished">2016-03-08</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/android/如何下载Google-play上的最新应用/">如何下载Google play上的最新应用</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-		<!-- Table of Contents aadd by eirot chen 20160217-->
-		
-
-        <script src="/assets/js/APlayer.min.js"> </script><p>Google play在中国大陆经常表现得不稳定，在中国的第三方市场下载应用又可能会出现病毒，或者部分国外的软件更新的不够实时，所以直接从play上下载应用就显得很重要了。然而Google play上的应用我们是不能直接下载的，只能通过登录Google账号在Google app store上安装。现在推荐一个网站通过搜索Google play apk 的id直接下载apk:</p>
-<p><a href="https://apkpure.com/" target="_blank" rel="external">apkpure: </a> <a href="https://apkpure.com/" target="_blank" rel="external">https://apkpure.com/</a><br><img src="/PostImage/apkpure_logo.png" alt="apkpure"></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/apk/">apk</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/google-play/">google play</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/android/">android</a>
-	</div>
-
-
       
       <div class="clearfix"></div>
     </div>
