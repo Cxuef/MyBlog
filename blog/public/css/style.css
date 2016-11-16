@@ -704,7 +704,7 @@ a {
   top: 20px;
   overlay-x: hidden;
   overflow-y: auto;
-  max-height: 200px;
+  max-height: 500px;
 }
 #header .switch-part3 {
   left: 200%;
