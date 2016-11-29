@@ -54,5 +54,5 @@ No implementation found for long org.opencv.core.Mat.n_Mat
 
 这是因为OpenCVLoader采用了异步加载，此时我们还没有连接上OpenCVManner的原因！！！
 
-好啦，示例就是实现将一张美女图彩色图变成灰度图。具体代码请移步github，O(∩_∩)O谢谢
-![Show the result](/PostImage/FistOpenCVResult.gif)
+好啦，示例就是实现将一张美女图彩色图变成灰度图。具体代码请移步github [FirstOpenCV](https://github.com/Cxuef/FirstOpenCV)，O(∩_∩)O谢谢
+![Show the result](/PostImage/OpenCVResult.gif)
