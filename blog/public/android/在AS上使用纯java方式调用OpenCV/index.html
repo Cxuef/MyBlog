@@ -39,8 +39,8 @@
 <meta property="og:image" content="http://cxuef.github.io/PostImage/CodeForOpenCV_1.png">
 <meta property="og:image" content="http://cxuef.github.io/PostImage/CodeForOpenCV_2.png">
 <meta property="og:image" content="http://cxuef.github.io/PostImage/CodeForOpenCV_3.png">
-<meta property="og:image" content="http://cxuef.github.io/PostImage/FistOpenCVResult.gif">
-<meta property="og:updated_time" content="2016-11-16T08:38:38.000Z">
+<meta property="og:image" content="http://cxuef.github.io/PostImage/OpenCVResult.gif">
+<meta property="og:updated_time" content="2016-11-28T05:57:40.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="在AS上使用纯java方式调用OpenCV">
 <meta name="twitter:description" content="如果你想在Android Studio上开发OpenCV应用,那么本文就是这里的一小步。下面我将分四点讲解如何在Android studio下将一张彩色的美女图利用OpenCV变成灰度图，详情请点more">
@@ -158,7 +158,7 @@ var _hmt = _hmt || [];
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/Activity/" style="font-size: 10px;">Activity</a> <a href="/tags/Android-N-Preview/" style="font-size: 10px;">Android N Preview</a> <a href="/tags/Android-Studio/" style="font-size: 15px;">Android Studio</a> <a href="/tags/DeskClock/" style="font-size: 10px;">DeskClock</a> <a href="/tags/Fragment/" style="font-size: 10px;">Fragment</a> <a href="/tags/Hexo/" style="font-size: 20px;">Hexo</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/OpenCV/" style="font-size: 15px;">OpenCV</a> <a href="/tags/Shadowsocks/" style="font-size: 10px;">Shadowsocks</a> <a href="/tags/Sublime-Text-3/" style="font-size: 10px;">Sublime Text 3</a> <a href="/tags/adb/" style="font-size: 10px;">adb</a> <a href="/tags/android/" style="font-size: 15px;">android</a> <a href="/tags/apk/" style="font-size: 10px;">apk</a> <a href="/tags/ccache/" style="font-size: 10px;">ccache</a> <a href="/tags/devtools/" style="font-size: 10px;">devtools</a> <a href="/tags/ffmpeg/" style="font-size: 15px;">ffmpeg</a> <a href="/tags/google-play/" style="font-size: 10px;">google play</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/matlab/" style="font-size: 10px;">matlab</a> <a href="/tags/mount/" style="font-size: 10px;">mount</a> <a href="/tags/music/" style="font-size: 15px;">music</a> <a href="/tags/nginx/" style="font-size: 10px;">nginx</a> <a href="/tags/rtmp/" style="font-size: 10px;">rtmp</a> <a href="/tags/widget/" style="font-size: 10px;">widget</a> <a href="/tags/个人小站/" style="font-size: 10px;">个人小站</a> <a href="/tags/旅行/" style="font-size: 10px;">旅行</a> <a href="/tags/自定义View/" style="font-size: 10px;">自定义View</a> <a href="/tags/诗词/" style="font-size: 10px;">诗词</a> <a href="/tags/遇见/" style="font-size: 10px;">遇见</a>
+						<a href="/tags/Activity/" style="font-size: 10px;">Activity</a> <a href="/tags/Android-N-Preview/" style="font-size: 10px;">Android N Preview</a> <a href="/tags/Android-Studio/" style="font-size: 15px;">Android Studio</a> <a href="/tags/DeskClock/" style="font-size: 10px;">DeskClock</a> <a href="/tags/Fragment/" style="font-size: 10px;">Fragment</a> <a href="/tags/Hexo/" style="font-size: 20px;">Hexo</a> <a href="/tags/Jni/" style="font-size: 10px;">Jni</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/OpenCV/" style="font-size: 20px;">OpenCV</a> <a href="/tags/Shadowsocks/" style="font-size: 10px;">Shadowsocks</a> <a href="/tags/Sublime-Text-3/" style="font-size: 10px;">Sublime Text 3</a> <a href="/tags/adb/" style="font-size: 10px;">adb</a> <a href="/tags/android/" style="font-size: 15px;">android</a> <a href="/tags/apk/" style="font-size: 10px;">apk</a> <a href="/tags/ccache/" style="font-size: 10px;">ccache</a> <a href="/tags/devtools/" style="font-size: 10px;">devtools</a> <a href="/tags/ffmpeg/" style="font-size: 15px;">ffmpeg</a> <a href="/tags/google-play/" style="font-size: 10px;">google play</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/matlab/" style="font-size: 10px;">matlab</a> <a href="/tags/mount/" style="font-size: 10px;">mount</a> <a href="/tags/music/" style="font-size: 15px;">music</a> <a href="/tags/nginx/" style="font-size: 10px;">nginx</a> <a href="/tags/rtmp/" style="font-size: 10px;">rtmp</a> <a href="/tags/widget/" style="font-size: 10px;">widget</a> <a href="/tags/个人小站/" style="font-size: 10px;">个人小站</a> <a href="/tags/旅行/" style="font-size: 10px;">旅行</a> <a href="/tags/自定义View/" style="font-size: 10px;">自定义View</a> <a href="/tags/诗词/" style="font-size: 10px;">诗词</a> <a href="/tags/遇见/" style="font-size: 10px;">遇见</a>
 					</div>
 				</section>
 				
@@ -288,7 +288,7 @@ var _hmt = _hmt || [];
 <p><strong> 4. 编写测试代码 </strong><br>大致思路：我们需要先实现BaseLoaderCallback，然后在OnResume（）的时候将OpenCVload进去，之后再onCreate（）或者其他地方完成自己需要的业务逻辑。<br><img src="/PostImage/CodeForOpenCV_1.png" alt="Code for OpenCV 1"><br><img src="/PostImage/CodeForOpenCV_2.png" alt="Code for OpenCV 2"><br><img src="/PostImage/CodeForOpenCV_3.png" alt="Code for OpenCV 3"></p>
 <p>这里需要注意一个问题：<br>那就是如果你直接在onCreate（）的时候就调用了OpenCV相关的东西，比如Mat rgbMat = New Mat( )可能会报错：<br>No implementation found for long org.opencv.core.Mat.n_Mat</p>
 <p>这是因为OpenCVLoader采用了异步加载，此时我们还没有连接上OpenCVManner的原因！！！</p>
-<p>好啦，示例就是实现将一张美女图彩色图变成灰度图。具体代码请移步github，O(∩_∩)O谢谢<br><img src="/PostImage/FistOpenCVResult.gif" alt="Show the result"></p>
+<p>好啦，示例就是实现将一张美女图彩色图变成灰度图。具体代码请移步github <a href="https://github.com/Cxuef/FirstOpenCV" target="_blank" rel="external">FirstOpenCV</a>，O(∩_∩)O谢谢<br><img src="/PostImage/OpenCVResult.gif" alt="Show the result"></p>
 
       
     </div>
@@ -298,11 +298,11 @@ var _hmt = _hmt || [];
     
 <nav id="article-nav">
   
-    <a href="/linux/【置顶】搭建nginx-rtmp直播服务器，ffmpeg模拟推流/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/android/Android-Studio上Native方式使用OpenCV/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          【置顶】搭建nginx rtmp直播服务器，ffmpeg模拟推流
+          Android Studio上Native方式使用OpenCV
         
       </div>
     </a>

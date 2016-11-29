@@ -146,7 +146,7 @@ var _hmt = _hmt || [];
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/Activity/" style="font-size: 10px;">Activity</a> <a href="/tags/Android-N-Preview/" style="font-size: 10px;">Android N Preview</a> <a href="/tags/Android-Studio/" style="font-size: 15px;">Android Studio</a> <a href="/tags/DeskClock/" style="font-size: 10px;">DeskClock</a> <a href="/tags/Fragment/" style="font-size: 10px;">Fragment</a> <a href="/tags/Hexo/" style="font-size: 20px;">Hexo</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/OpenCV/" style="font-size: 15px;">OpenCV</a> <a href="/tags/Shadowsocks/" style="font-size: 10px;">Shadowsocks</a> <a href="/tags/Sublime-Text-3/" style="font-size: 10px;">Sublime Text 3</a> <a href="/tags/adb/" style="font-size: 10px;">adb</a> <a href="/tags/android/" style="font-size: 15px;">android</a> <a href="/tags/apk/" style="font-size: 10px;">apk</a> <a href="/tags/ccache/" style="font-size: 10px;">ccache</a> <a href="/tags/devtools/" style="font-size: 10px;">devtools</a> <a href="/tags/ffmpeg/" style="font-size: 15px;">ffmpeg</a> <a href="/tags/google-play/" style="font-size: 10px;">google play</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/matlab/" style="font-size: 10px;">matlab</a> <a href="/tags/mount/" style="font-size: 10px;">mount</a> <a href="/tags/music/" style="font-size: 15px;">music</a> <a href="/tags/nginx/" style="font-size: 10px;">nginx</a> <a href="/tags/rtmp/" style="font-size: 10px;">rtmp</a> <a href="/tags/widget/" style="font-size: 10px;">widget</a> <a href="/tags/个人小站/" style="font-size: 10px;">个人小站</a> <a href="/tags/旅行/" style="font-size: 10px;">旅行</a> <a href="/tags/自定义View/" style="font-size: 10px;">自定义View</a> <a href="/tags/诗词/" style="font-size: 10px;">诗词</a> <a href="/tags/遇见/" style="font-size: 10px;">遇见</a>
+						<a href="/tags/Activity/" style="font-size: 10px;">Activity</a> <a href="/tags/Android-N-Preview/" style="font-size: 10px;">Android N Preview</a> <a href="/tags/Android-Studio/" style="font-size: 15px;">Android Studio</a> <a href="/tags/DeskClock/" style="font-size: 10px;">DeskClock</a> <a href="/tags/Fragment/" style="font-size: 10px;">Fragment</a> <a href="/tags/Hexo/" style="font-size: 20px;">Hexo</a> <a href="/tags/Jni/" style="font-size: 10px;">Jni</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/OpenCV/" style="font-size: 20px;">OpenCV</a> <a href="/tags/Shadowsocks/" style="font-size: 10px;">Shadowsocks</a> <a href="/tags/Sublime-Text-3/" style="font-size: 10px;">Sublime Text 3</a> <a href="/tags/adb/" style="font-size: 10px;">adb</a> <a href="/tags/android/" style="font-size: 15px;">android</a> <a href="/tags/apk/" style="font-size: 10px;">apk</a> <a href="/tags/ccache/" style="font-size: 10px;">ccache</a> <a href="/tags/devtools/" style="font-size: 10px;">devtools</a> <a href="/tags/ffmpeg/" style="font-size: 15px;">ffmpeg</a> <a href="/tags/google-play/" style="font-size: 10px;">google play</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/matlab/" style="font-size: 10px;">matlab</a> <a href="/tags/mount/" style="font-size: 10px;">mount</a> <a href="/tags/music/" style="font-size: 15px;">music</a> <a href="/tags/nginx/" style="font-size: 10px;">nginx</a> <a href="/tags/rtmp/" style="font-size: 10px;">rtmp</a> <a href="/tags/widget/" style="font-size: 10px;">widget</a> <a href="/tags/个人小站/" style="font-size: 10px;">个人小站</a> <a href="/tags/旅行/" style="font-size: 10px;">旅行</a> <a href="/tags/自定义View/" style="font-size: 10px;">自定义View</a> <a href="/tags/诗词/" style="font-size: 10px;">诗词</a> <a href="/tags/遇见/" style="font-size: 10px;">遇见</a>
 					</div>
 				</section>
 				
@@ -269,6 +269,74 @@ var _hmt = _hmt || [];
       
         <p class="article-more-link">
           <a  href="/linux/【置顶】搭建nginx-rtmp直播服务器，ffmpeg模拟推流/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-Android-Studio上Native方式使用OpenCV" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/android/Android-Studio上Native方式使用OpenCV/" class="article-date">
+  	<time datetime="2016-11-28T02:46:21.000Z" itemprop="datePublished">2016-11-28</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/android/Android-Studio上Native方式使用OpenCV/">Android Studio上Native方式使用OpenCV</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>开始之前先说下native方式使用OpenCV的好处吧，坏处我不说，嘿嘿。</p>
+<ul>
+<li>native函数执行效率高，速度快</li>
+<li>不用安装可恶的OpenCVManger.apk</li>
+<li>大量可复用C++代码，不用苦逼地查找这个api在java的哪个类<br><img src="/PostImage/opencv_android_ndk.png" alt="opencv android ndk">
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Jni/">Jni</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/OpenCV/">OpenCV</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/android/">android</a>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a  href="/android/Android-Studio上Native方式使用OpenCV/#more">more >></a>
         </p>
       
       <div class="clearfix"></div>
@@ -595,96 +663,6 @@ var _hmt = _hmt || [];
 	</div>
 
 
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-Android-Studio-Tip-of-the-Day" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/android/Android-Studio-Tip-of-the-Day/" class="article-date">
-  	<time datetime="2016-04-12T01:50:23.000Z" itemprop="datePublished">2016-04-12</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/android/Android-Studio-Tip-of-the-Day/">Android Studio Tip of the Day</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><a href="http://www.developerphil.com/android-studio-tips-of-the-day-roundup-1/">http://www.developerphil.com/android-studio-tips-of-the-day-roundup-1/</a><br><a href="http://developer.android.com/intl/zh-cn/sdk/index.html">http://developer.android.com/intl/zh-cn/sdk/index.html</a><br><a href="http://www.jetbrains.com/idea/">http://www.jetbrains.com/idea/</a><br><a href="https://www.jetbrains.com/help/idea/2016.1/android.html?origin=old_help">https://www.jetbrains.com/help/idea/2016.1/android.html?origin=old_help</a></p>
-<p>Android Studio Tips and Tricks</p>
-<ul>
-<li><p>Productivity Shortcuts</p>
-</li>
-<li><p>Smart Rendering</p>
-</li>
-<li><p>Bitmap rendering in the debugger</p>
-</li>
-<li><p>Creating new files</p>
-</li>
-<li><p>Output window message filtering</p>
-</li>
-<li><p>Hierarchical parent setting</p>
-</li>
-<li><p>Creating layouts</p>
-</li>
-<li><p>Annotations</p>
-</li>
-<li><p>Java class decompiling</p>
-</li>
-<li><p>Debugging and performance enhancements</p>
-</li>
-<li><p>Live templates</p>
-</li>
-</ul>
-<p><img src="/PostImage/as_loading.png" alt="Andtoid Studio"></p>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android-Studio/">Android Studio</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/android/">android</a>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a  href="/android/Android-Studio-Tip-of-the-Day/#more">more >></a>
-        </p>
       
       <div class="clearfix"></div>
     </div>
